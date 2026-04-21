@@ -1,0 +1,49 @@
+[[rule]]
+name = "input_const"
+lhs = "Input"
+rhs = "HZRConst"
+
+[[rule]]
+name = "edge_eval"
+lhs = "Edge HZRConst"
+rhs = "HZRConst"
+
+[[rule]]
+name = "sum_accumulate"
+lhs = "Sum HZRConst"
+rhs = "HZRConst"
+
+[[rule]]
+name = "outer_eval"
+lhs = "Edge Sum"
+rhs = "Output"
+
+[[rule]]
+name = "loss_mse"
+lhs = "LossMSE Output"
+rhs = "LossSink"
+
+[[rule]]
+name = "grad_add"
+lhs = "GradAdd"
+rhs = "GradSink"
+
+[[rule]]
+name = "grad_mul"
+lhs = "GradMul"
+rhs = "GradSink"
+
+[[rule]]
+name = "grad_pow"
+lhs = "GradPow"
+rhs = "GradSink"
+
+[[rule]]
+name = "grad_sink"
+lhs = "GradSink"
+rhs = "WeightUpdate"
+
+[[rule]]
+name = "weight_update"
+lhs = "WeightUpdate HZRVar"
+rhs = "HZRVar"

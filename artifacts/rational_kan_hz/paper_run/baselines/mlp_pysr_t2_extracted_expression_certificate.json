@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "\\frac{0.483599714792873 e^{x_{0} e^{- 0.449540030640649 x_{0}}}}{\\sqrt{1.0 e^{x_{1}} - 0.110959656703588}}",
+    "latex_sha256": "64fdf01d6b5b3f99ef4fe29de90ffe4c8b22471adea75b11a4cc2224df25e1e7",
+    "sympy_expression_sha256": "41a062e0dd42f7a7cd0d6adc86baa76b87c3ba0b697a21aff7312b9bd6abfa47",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "0.483599714792873*e**(x_0/e**(0.449540030640649*x_0))/sqrt(1.0*e**x_1 - 0.110959656703588)",
+    "latex_roundtrip_residual": "0.483599714792873*(1.0*e**(x_0/e**(0.449540030640649*x_0))*sqrt(1.0*exp(x_1) - 0.110959656703588) - 1.0*sqrt(1.0*e**x_1 - 0.110959656703588)*exp(x_0*exp(-0.449540030640649*x_0)))/(sqrt(1.0*e**x_1 - 0.110959656703588)*sqrt(1.0*exp(x_1) - 0.110959656703588))",
+    "latex_roundtrip_passed": false,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "1.0*(-1.0*x_0*sqrt(1.0*exp(x_1) - 0.110959656703588) + 0.483599714792873*x_1*exp(x_0*exp(-0.449540030640649*x_0)) - 1.0*sqrt(1.0*exp(x_1) - 0.110959656703588) + 0.967199429585746*exp(x_0*exp(-0.449540030640649*x_0)))/((x_1 + 2)*sqrt(1.0*exp(x_1) - 0.110959656703588))",
+    "semantic_faithfulness_passed": false,
+    "faithfulness_kind": "approximate_numeric",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

@@ -1,0 +1,60 @@
+{
+  "target_id": "t6",
+  "kind": "polynomial_truncated_transcendental",
+  "seed": 20260426,
+  "expression": "x_0**2 + x_1**5/120 - x_1**3/6 + x_1",
+  "basis": [
+    "x_0**2",
+    "x_1",
+    "x_1**3",
+    "x_1**5"
+  ],
+  "coefficients": [
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": -1,
+      "den": 6
+    },
+    {
+      "num": 1,
+      "den": 120
+    }
+  ],
+  "extracted_expression": "(120*x_0**2 + x_1**5 - 20*x_1**3 + 120*x_1)/120",
+  "symbolic_residual": "0",
+  "expression_sha256": "830035774cec2d811466b065ccda1817fc9b8b6561c0702007cc534f4e98ae34",
+  "rationalization_status": "best_polynomial_approximant",
+  "rationalization_mode": "oracle_reconstruction",
+  "training_executed": false,
+  "training_executed_note": "This row validates the extraction pipeline against known oracle coefficients and basis. Training-convergence evidence is joined from trained-evidence artifacts at baseline-table time (see run_baselines rkan_p4_sbr_trained).",
+  "expected_status": "best_polynomial_approximant",
+  "coefficient_max_abs_error": 0.0,
+  "final_mse": 0.0,
+  "faithfulness_point_mismatches": 0,
+  "faithfulness_points": 961,
+  "max_point_residual": 0.0,
+  "threshold": 1e-06,
+  "threshold_source": "PM T1.3 target 6",
+  "pipeline_passed": true,
+  "passed": true,
+  "boundary_recorded": false,
+  "artifact_files": {
+    "sympy": "artifacts/rational_kan_hz/paper_run/targets/t6_extracted_expression.sympy",
+    "tex": "artifacts/rational_kan_hz/paper_run/targets/t6_extracted_expression.tex",
+    "pdf": "artifacts/rational_kan_hz/paper_run/targets/t6_extracted_expression.pdf",
+    "certificate": "artifacts/rational_kan_hz/paper_run/targets/t6_extracted_expression_certificate.json",
+    "pdf_compiled": true,
+    "latex_presentation_passed": true,
+    "semantic_faithfulness_passed": true
+  },
+  "latex_presentation_passed": true,
+  "semantic_faithfulness_passed": true,
+  "commit": "bb6703b45b"
+}

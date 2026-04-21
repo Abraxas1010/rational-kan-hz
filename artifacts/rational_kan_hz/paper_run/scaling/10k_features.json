@@ -1,0 +1,18 @@
+{
+  "feature_count": 10000,
+  "samples": 30,
+  "steps": 1000,
+  "batch_size": 65536,
+  "mean_speedup": 1.211635746913301,
+  "ci_lo": 1.1971926988704156,
+  "ci_hi": 1.2277872240011096,
+  "mean_total_speedup": 1.2129554363457276,
+  "total_ci_lo": 1.1971993748683356,
+  "total_ci_hi": 1.2283280944889294,
+  "p4_over_dense_memory_ratio": 0.9939461495589338,
+  "active_support_mean": 3,
+  "threshold": 0.0,
+  "threshold_source": "PM T1.5 requires alpha > 0",
+  "passed": true,
+  "commit": "bb6703b45b"
+}

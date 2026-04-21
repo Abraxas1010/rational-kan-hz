@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+title: "Rational KAN HZ: Exact Rational Learning with Hybrid Zeckendorf Arithmetic"
+message: "If you use this repository, please cite it using the metadata from this file."
+type: software
+authors:
+  - family-names: Goodman
+    given-names: Richard
+    affiliation: Apoth3osis
+  - family-names: Veselov
+    given-names: Vladimir
+    affiliation: Independent Research Basis
+license: Apoth3osis License Stack v1
+abstract: >-
+  Reproducible research package for exact-rational Kolmogorov-Arnold Networks,
+  Hybrid Zeckendorf sparse arithmetic, Lean 4 proof surfaces, Rust P-stack
+  execution, and symbolic extraction to SymPy and LaTeX.
+keywords:
+  - rational KAN
+  - Hybrid Zeckendorf
+  - Lean 4
+  - symbolic extraction
+  - exact rational arithmetic
+  - reproducible research

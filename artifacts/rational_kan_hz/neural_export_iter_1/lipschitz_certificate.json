@@ -1,0 +1,17 @@
+{
+  "per_input_bound": {
+    "x_0": "4",
+    "x_1": "1"
+  },
+  "per_input_domain": {
+    "x_0": "[-2, 2]",
+    "x_1": "[-2, 2]"
+  },
+  "whole_net_bound": "5",
+  "whole_net_bound_metric": "L^1 sum of per-input suprema of |d expr / d x_i|",
+  "whole_net_bound_is_finite": true,
+  "derivation_method": "sympy.diff + sympy.calculus.util.maximum over compact box",
+  "sampling_sanity_violations": 0,
+  "sampling_sanity_samples": 1000,
+  "rules_fingerprint": "78f2f9d9557cebf3a2161c70e495d498e554803426c796035dff5a2ba17051ab"
+}

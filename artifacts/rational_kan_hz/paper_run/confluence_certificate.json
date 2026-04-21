@@ -1,0 +1,40 @@
+{
+  "rules_fingerprint": "78f2f9d9557cebf3a2161c70e495d498e554803426c796035dff5a2ba17051ab",
+  "termination_measure": "lexicographic: (unexpanded Edge count, unexpanded HZRPow(n>1) count, value-value arithmetic agent count, structural Sum/Dup count)",
+  "rule_pairs_examined": 90,
+  "overlapping_pairs": 1,
+  "overlapping_pairs_detail": [
+    {
+      "rule_left": "outer_eval",
+      "rule_right": "sum_accumulate",
+      "lhs_left": "Edge Sum",
+      "lhs_right": "Sum HZRConst",
+      "overlap": [
+        "Sum"
+      ],
+      "closed": true,
+      "closure_witness": "symbolic_payload_residual_zero",
+      "payload_algebra": "Q[c] with HZRConst payload c",
+      "minimal_overlap_term": "Edge (Sum (HZRConst c))",
+      "left_reduct": "c",
+      "right_reduct": "c",
+      "residual": "0",
+      "fixture_payload": "7/13",
+      "fixture_residual": "0",
+      "closure_is_structural": true,
+      "closure_reducts_computed_by": "independent_callables_sum_accumulate_then_outer_eval_vs_outer_eval_then_sum_accumulate",
+      "derivation_steps": [
+        "Let c be an arbitrary rational payload carried by HZRConst.",
+        "Path L: sum_accumulate(Sum(HZRConst(c))) -> HZRConst(c); outer_eval then extracts payload c.",
+        "Path R: outer_eval(Edge(Sum(HZRConst(c)))) -> c via accumulated payload evaluation.",
+        "Independent callables compute both reducts; sp.simplify(L - R) = 0.",
+        "Fixture sanity: substituting c = 7/13 yields the same concrete rational on both paths."
+      ]
+    }
+  ],
+  "non_overlapping_pairs": 89,
+  "critical_pairs_total": 1,
+  "critical_pairs_closed": 1,
+  "critical_pairs_unclosed": 0,
+  "closure_verdict": "symbolic_residuals_closed"
+}

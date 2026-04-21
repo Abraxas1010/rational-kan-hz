@@ -1,0 +1,117 @@
+{
+  "conjecture_id": "rational_kan_hz_pstack_speed_regime_20260420",
+  "version": 1,
+  "statement": "Characterize the regime (microbatch count m*, width w*, or workload class) in which the Hybrid Zeckendorf P-stack via FactoredRationalLazyAccumulator achieves CI95 lower bound > 1.0 over GMP-Fraction on the exact-rational KAN substrate. Split out from rational_kan_hz_pstack_in_loop_20260420 on 2026-04-20.",
+  "root": "n_sr_root",
+  "nodes": {
+    "n_sr_root": {
+      "node_id": "n_sr_root",
+      "parent_id": null,
+      "children": [
+        "n_sr_inherit",
+        "n_sr_extend_microbatch",
+        "n_sr_algorithm_change",
+        "n_sr_prove_no_crossover"
+      ],
+      "node_type": "root",
+      "content": "Prove: there exists a regime (m*, w*, or workload class) in which HZ P-stack via FactoredRationalLazyAccumulator achieves CI95 lower > 1.0 over GMP-Fraction on the exact-rational KAN substrate, OR prove no such regime exists and scope HZ advantage strictly to T1.5 dictionary workload.",
+      "goal_before": "Characterize the HZ-speedup regime for exact-rational KAN via FactoredRationalLazyAccumulator.",
+      "goal_after": null,
+      "outcome": "pending",
+      "depth": 0,
+      "created": "2026-04-20T22:20:00+00:00",
+      "agent": "abraxas",
+      "pruned": false
+    },
+    "n_sr_inherit": {
+      "node_id": "n_sr_inherit",
+      "parent_id": "n_sr_root",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Inherit evidence floor from the split: microbatch sweep m in {1..128}, width sweep w in {10..500}, bridge overhead breakdown (99.28 percent in Rust HZ primitive), inference-lane CI95 [0.77436, 1.07393], update-lane CI95 [0.07012, 0.07241], T1.5 dictionary 44.17x at 10M features.",
+      "goal_before": "Characterize the HZ-speedup regime for exact-rational KAN via FactoredRationalLazyAccumulator.",
+      "goal_after": null,
+      "outcome": "accepted",
+      "depth": 1,
+      "created": "2026-04-20T22:20:00+00:00",
+      "agent": "abraxas",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Evidence already on disk under artifacts/rational_kan_hz/paper_run/pstack_in_loop/ and artifacts/rational_kan_hz/paper_run/scaling/. No rerun needed to start this conjecture."
+    },
+    "n_sr_extend_microbatch": {
+      "node_id": "n_sr_extend_microbatch",
+      "parent_id": "n_sr_root",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Extend microbatch sweep beyond m=128 and attempt to locate the crossover empirically. Fit the observed monotone trend and test whether extrapolation is feasible within realistic training budgets.",
+      "goal_before": "Characterize the HZ-speedup regime for exact-rational KAN via FactoredRationalLazyAccumulator.",
+      "goal_after": null,
+      "outcome": "pending",
+      "depth": 1,
+      "created": "2026-04-20T22:20:00+00:00",
+      "agent": "abraxas",
+      "session_id": null,
+      "pruned": false
+    },
+    "n_sr_algorithm_change": {
+      "node_id": "n_sr_algorithm_change",
+      "parent_id": "n_sr_root",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Algorithmic change: emit operand groups without LCM pre-collapse entirely (pure-integer per-denominator HZ accumulate), re-measure whether the Rust HZ primitive hot path reshapes and whether a smaller network-scale crossover emerges.",
+      "goal_before": "Characterize the HZ-speedup regime for exact-rational KAN via FactoredRationalLazyAccumulator.",
+      "goal_after": null,
+      "outcome": "pending",
+      "depth": 1,
+      "created": "2026-04-20T22:20:00+00:00",
+      "agent": "abraxas",
+      "session_id": null,
+      "pruned": false
+    },
+    "n_sr_prove_no_crossover": {
+      "node_id": "n_sr_prove_no_crossover",
+      "parent_id": "n_sr_root",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Prove (via bridge_overhead_breakdown + width_sweep + microbatch_sweep monotonicity + T1.5 contrast) that no realistic rational-KAN regime crosses, and formally scope HZ advantage to the T1.5 dictionary workload (small-magnitude operands, feature counts >> 1e4).",
+      "goal_before": "Characterize the HZ-speedup regime for exact-rational KAN via FactoredRationalLazyAccumulator.",
+      "goal_after": null,
+      "outcome": "pending",
+      "depth": 1,
+      "created": "2026-04-20T22:20:00+00:00",
+      "agent": "abraxas",
+      "session_id": null,
+      "pruned": false
+    }
+  },
+  "metadata": {
+    "created": "2026-04-20T22:20:00+00:00",
+    "last_updated": "2026-04-20T22:20:00+00:00",
+    "total_attempts": 1,
+    "max_depth_reached": 1,
+    "agents_involved": [
+      "abraxas"
+    ],
+    "current_status": "exploring",
+    "mode": "code-reasoning"
+  },
+  "summary": {
+    "tried_strategies": [],
+    "unexplored_strategies": [
+      "extend microbatch sweep beyond m=128",
+      "emit operand groups without LCM pre-collapse",
+      "prove no crossover and scope to T1.5"
+    ],
+    "key_blockers": [
+      "99.28 percent of P-stack time is inside the Rust HZ primitive - FFI migration cannot move the gate"
+    ],
+    "promising_paths": [
+      "algorithmic change to HZ decomposition (no LCM pre-collapse)"
+    ],
+    "dead_ends": [
+      "bridge IO engineering (JSON->FFI) - bounded above at 0.72 percent improvement"
+    ],
+    "last_compaction": "2026-04-20T22:20:00+00:00"
+  }
+}

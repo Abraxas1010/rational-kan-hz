@@ -1,0 +1,68 @@
+{
+  "target_id": "t3",
+  "basis": [
+    "x_0*x_1/(x_0**2 + x_1**2 + 1)"
+  ],
+  "oracle_coefficients": [
+    {
+      "num": 1,
+      "den": 1
+    }
+  ],
+  "devices": [
+    {
+      "device": "cuda",
+      "samples": 3,
+      "exact_count": 3,
+      "mean_wall_clock_ns": 194545438.33333334,
+      "wall_clock_ci95_lower": 160428976.0,
+      "wall_clock_ci95_upper": 253633710.0,
+      "mean_final_val_mse": 5.870823843540989e-25,
+      "val_mse_ci95_lower": 5.74819997322991e-25,
+      "val_mse_ci95_upper": 5.947925076942394e-25,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "samples": 3,
+      "exact_count": 3,
+      "mean_wall_clock_ns": 40288743.666666664,
+      "wall_clock_ci95_lower": 39917210.0,
+      "wall_clock_ci95_upper": 40523823.0,
+      "mean_final_val_mse": 5.687378213970874e-25,
+      "val_mse_ci95_lower": 5.6472073227430165e-25,
+      "val_mse_ci95_upper": 5.730816634807944e-25,
+      "passed": true
+    }
+  ],
+  "samples_total": 6,
+  "steps": 2500,
+  "train_points": 10000,
+  "val_points": 2000,
+  "lr": 0.05,
+  "denominator_bound": 1000000,
+  "representative_device": "cuda",
+  "representative_seed": 21260423,
+  "representative_steps_executed": 500,
+  "representative_final_val_mse": 5.74819997322991e-25,
+  "representative_coefficient_max_abs_error": 0.0,
+  "extracted_expression": "x_0*x_1/(x_0**2 + x_1**2 + 1)",
+  "symbolic_residual": "0",
+  "semantic_faithfulness_passed": true,
+  "exact_match_all_runs": true,
+  "val_threshold_all_runs": true,
+  "threshold": 1e-12,
+  "threshold_source": "PM T1.3 target 3",
+  "artifact_files": {
+    "sympy": "artifacts/rational_kan_hz/paper_run/trained/t3/t3_trained_expression.sympy",
+    "tex": "artifacts/rational_kan_hz/paper_run/trained/t3/t3_trained_expression.tex",
+    "pdf": "artifacts/rational_kan_hz/paper_run/trained/t3/t3_trained_expression.pdf",
+    "certificate": "artifacts/rational_kan_hz/paper_run/trained/t3/t3_trained_expression_certificate.json",
+    "pdf_compiled": true,
+    "latex_presentation_passed": true,
+    "semantic_faithfulness_passed": true
+  },
+  "rows_path": "artifacts/rational_kan_hz/paper_run/trained/t3/trained_rows.json",
+  "passed": true,
+  "commit": "bb6703b45b"
+}

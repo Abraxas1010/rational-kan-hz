@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "x_{0}^{2} + \\sin{\\left(\\frac{0.7438068 x_{1}}{0.7439624 + \\frac{0.000167412702816632}{\\cos{\\left(3.6279216 \\cos{\\left(x_{1} \\right)} \\right)}}} \\right)}",
+    "latex_sha256": "52fe02c193c6e4c79bfbe01cf1eb49324cce1ca7b04635ceea1b42e955ed6738",
+    "sympy_expression_sha256": "e6539162ad1aadcfd9dc7f15d1dfdab8b80ba381d2624375666575de407d08d5",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "x_0**2 + sin(0.7438068*x_1/(0.7439624 + 0.000167412702816632/cos(3.6279216*cos(x_1))))",
+    "latex_roundtrip_residual": "sin(0.7438068*x_1/(0.7439624 + 0.000167412702816632/cos(3.6279216*cos(x_1)))) - sin(0.7438068*x_1/(0.7439624 + 0.000167412702816632/cos(3.6279216*cos(x_1))))",
+    "latex_roundtrip_passed": false,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "(-x_1**5 + 20*x_1**3 - 120*x_1 + 120*sin(0.7438068*x_1/(0.7439624 + 0.000167412702816632/cos(3.6279216*cos(x_1)))))/120",
+    "semantic_faithfulness_passed": false,
+    "faithfulness_kind": "approximate_numeric",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

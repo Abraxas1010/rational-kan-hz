@@ -1,0 +1,10 @@
+{
+  "artifact": "rational_kan_hz_neural_symbolic_export",
+  "commit": "c8967472d5",
+  "weights_hash": "e0c73dec9c51f014e4f344c928e5cbf02f67cea2b83f8bb32f534e1576033963",
+  "expression_sha256": "bdc971dfdf64fd07d0d9b94a26945cbbe1d7b86c158e66174ef26f46fb332ca8",
+  "rules_fingerprint": "78f2f9d9557cebf3a2161c70e495d498e554803426c796035dff5a2ba17051ab",
+  "native_payload_summary": "artifacts/rational_kan_hz/native_payload_iter_1/native_payload_summary.json",
+  "claim": "A rational Boundary RKAN learned the target from exact rational samples and exported a faithful symbolic normal form.",
+  "hot_path_boundary": "P4 remains an update/readout substrate optimization. SymPy/LaTeX are final artifact materialization only."
+}

@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "\\frac{x_{0}^{5}}{120}",
+    "latex_sha256": "815c1af4263fc5b41981252f196a938a590de69703c9c26b571ddab43b42661f",
+    "sympy_expression_sha256": "2d8818723b527f5bbb4c9f40bcb3807a36e62032f43614e2756ee0fbdceec2c9",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "x_0**5/120",
+    "latex_roundtrip_residual": "0",
+    "latex_roundtrip_passed": true,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "faithfulness_kind": "exact",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

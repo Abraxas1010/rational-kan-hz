@@ -1,0 +1,128 @@
+{
+  "conjecture_id": "rational_kan_hz_pstack_in_loop_20260420",
+  "version": 2,
+  "statement": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle. Speed clause split out on 2026-04-20 into rational_kan_hz_pstack_speed_regime_20260420.",
+  "root": "n_a8216d81",
+  "nodes": {
+    "n_a8216d81": {
+      "node_id": "n_a8216d81",
+      "parent_id": null,
+      "children": [
+        "n_a01b2262",
+        "n_51faa265",
+        "n_8e9ef424",
+        "n_05b6d049",
+        "n_3372de3c"
+      ],
+      "node_type": "root",
+      "content": "Prove: HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "pending",
+      "depth": 0,
+      "created": "2026-04-21T00:11:16.686667+00:00",
+      "agent": "unknown",
+      "pruned": false
+    },
+    "n_a01b2262": {
+      "node_id": "n_a01b2262",
+      "parent_id": "n_a8216d81",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Phase 1: Exact network and oracle lane. Build a degree>=8, hidden>=10 exact-rational KAN with pure Fraction forward/backward/update traces and a reproducible SB-grid training task.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "accepted",
+      "depth": 1,
+      "created": "2026-04-21T00:11:29.444570+00:00",
+      "agent": "unknown",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Implemented exact degree-8 hidden-10 RationalKANDeg8 oracle lane in projects/rational_kan_hz/src/rkan_hz/rkan_pstack_training.py with exact Fraction forward/backward/update semantics and network_spec emission."
+    },
+    "n_51faa265": {
+      "node_id": "n_51faa265",
+      "parent_id": "n_a8216d81",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Phase 0: Reuse map and claim audit. Verify which existing rkan_hz and Hybrid Zeckendorf surfaces are reusable, and record the exact dishonest shortcuts to forbid before implementation starts.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "accepted",
+      "depth": 1,
+      "created": "2026-04-21T00:11:29.455296+00:00",
+      "agent": "unknown",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Reuse map and imported-brief claim audit completed in WIP/rational_kan_hz_pstack_in_loop_pm_instructions_2026-04-20.md. Honest boundary frozen: current normal-equation and surrogate speed lanes are insufficient for in-loop parity claims."
+    },
+    "n_8e9ef424": {
+      "node_id": "n_8e9ef424",
+      "parent_id": "n_a8216d81",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Phase 4: Network-scale speed benchmark and paper-run integration. Measure dense vs P-stack inference on the trained degree>=8, hidden>=10 network with CI on CPU and CUDA, then join the artifact into rkan_paper_run without rerunning.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "split_out",
+      "depth": 1,
+      "created": "2026-04-21T00:11:29.458846+00:00",
+      "agent": "unknown",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Split out on 2026-04-20 into rational_kan_hz_pstack_speed_regime_20260420. Evidence at time of split: update-lane mean speedup 0.07126 CI95 [0.07012, 0.07241]; inference-lane mean 0.92862 CI95 [0.77436, 1.07393]; microbatch sweep m in {1..128} monotone improving from 0.0214 to 0.0805 with no crossover; width sweep w in {10..500} at operand-magnitude 1e5-1e6 monotone decreasing; T1.5 dictionary lane at 10M features crosses 44.17x independently. Conjecture-level Name-Content Drift resolved by narrowing this conjecture to parity+scale and carrying the speed clause into its own ledger entry."
+    },
+    "n_05b6d049": {
+      "node_id": "n_05b6d049",
+      "parent_id": "n_a8216d81",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Phase 2: P-stack in-the-loop substrate. Wire FlatHybridNumber/batch_readout/active-set dispatch into the actual forward and backward accumulator path without changing the mathematical update rule.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "accepted",
+      "depth": 1,
+      "created": "2026-04-21T00:11:29.471431+00:00",
+      "agent": "unknown",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Implemented a real Hybrid Zeckendorf backend via bench/hybrid_zeckendorf/src/bin/pstack_exact_accumulate.rs and wired it into forward/backward exact accumulation groups through a persistent worker."
+    },
+    "n_3372de3c": {
+      "node_id": "n_3372de3c",
+      "parent_id": "n_a8216d81",
+      "children": [],
+      "node_type": "strategy",
+      "content": "Phase 3: Bit-identical parity suite. Prove by executable witness that forward activations, backward gradients, and parameter trajectories match the Fraction oracle exactly over multi-step training.",
+      "goal_before": "HZ P-stack in-the-loop at KAN degree >= 8 and hidden width >= 10: exact Fraction forward/backward/update parity against the Fraction oracle plus positive inference speedup CI on the trained network.",
+      "goal_after": null,
+      "outcome": "accepted",
+      "depth": 1,
+      "created": "2026-04-21T00:11:29.480619+00:00",
+      "agent": "unknown",
+      "session_id": null,
+      "pruned": false,
+      "outcome_reason": "Parity suite closes on the implemented surface: projects/rational_kan_hz/tests/test_pstack_in_loop.py plus artifacts/.../pstack_in_loop/bitwise_parity_log.jsonl record exact tensor equality for forward/backward/update."
+    }
+  },
+  "metadata": {
+    "created": "2026-04-21T00:11:16.686679+00:00",
+    "last_updated": "2026-04-20T22:20:00+00:00",
+    "total_attempts": 5,
+    "max_depth_reached": 1,
+    "agents_involved": [
+      "unknown",
+      "abraxas"
+    ],
+    "current_status": "closed",
+    "mode": "code-reasoning"
+  },
+  "summary": {
+    "tried_strategies": [],
+    "unexplored_strategies": [],
+    "key_blockers": [],
+    "promising_paths": [],
+    "dead_ends": [],
+    "last_compaction": "2026-04-21T00:11:16.686683+00:00"
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "commit": "6664a35489",
+  "rows": [
+    {
+      "decode_ns": 11024,
+      "dense_ns": 24752,
+      "encode_ns": 17040,
+      "lower_ns": 7600,
+      "prep_ns": 23200,
+      "request_bytes": 942,
+      "response_bytes": 191,
+      "roundtrip_ns": 6847240,
+      "sample_index": 0,
+      "speedup": 0.003584075768334795,
+      "total_pstack_ns": 6906104,
+      "width": 13
+    },
+    {
+      "decode_ns": 17024,
+      "dense_ns": 26976,
+      "encode_ns": 12464,
+      "lower_ns": 14096,
+      "prep_ns": 16912,
+      "request_bytes": 853,
+      "response_bytes": 184,
+      "roundtrip_ns": 6009860,
+      "sample_index": 1,
+      "speedup": 0.004443890934897393,
+      "total_pstack_ns": 6070356,
+      "width": 13
+    },
+    {
+      "decode_ns": 18416,
+      "dense_ns": 26064,
+      "encode_ns": 10881,
+      "lower_ns": 13552,
+      "prep_ns": 10080,
+      "request_bytes": 962,
+      "response_bytes": 190,
+      "roundtrip_ns": 7220904,
+      "sample_index": 2,
+      "speedup": 0.0035832552108358826,
+      "total_pstack_ns": 7273833,
+      "width": 13
+    },
+    {
+      "decode_ns": 18641,
+      "dense_ns": 29936,
+      "encode_ns": 12736,
+      "lower_ns": 14080,
+      "prep_ns": 10528,
+      "request_bytes": 927,
+      "response_bytes": 188,
+      "roundtrip_ns": 6852631,
+      "sample_index": 3,
+      "speedup": 0.004333139951619832,
+      "total_pstack_ns": 6908616,
+      "width": 13
+    },
+    {
+      "decode_ns": 19584,
+      "dense_ns": 30928,
+      "encode_ns": 13232,
+      "lower_ns": 14032,
+      "prep_ns": 11248,
+      "request_bytes": 744,
+      "response_bytes": 176,
+      "roundtrip_ns": 4925153,
+      "sample_index": 4,
+      "speedup": 0.006206392656678404,
+      "total_pstack_ns": 4983249,
+      "width": 13
+    },
+    {
+      "decode_ns": 18464,
+      "dense_ns": 28272,
+      "encode_ns": 13456,
+      "lower_ns": 14368,
+      "prep_ns": 10512,
+      "request_bytes": 943,
+      "response_bytes": 191,
+      "roundtrip_ns": 7107912,
+      "sample_index": 5,
+      "speedup": 0.003946006482884448,
+      "total_pstack_ns": 7164712,
+      "width": 13
+    },
+    {
+      "decode_ns": 11792,
+      "dense_ns": 21377,
+      "encode_ns": 13008,
+      "lower_ns": 8512,
+      "prep_ns": 10336,
+      "request_bytes": 877,
+      "response_bytes": 185,
+      "roundtrip_ns": 6220613,
+      "sample_index": 6,
+      "speedup": 0.0034125334177487177,
+      "total_pstack_ns": 6264261,
+      "width": 13
+    },
+    {
+      "decode_ns": 3680,
+      "dense_ns": 14992,
+      "encode_ns": 9776,
+      "lower_ns": 2720,
+      "prep_ns": 9456,
+      "request_bytes": 871,
+      "response_bytes": 184,
+      "roundtrip_ns": 6147109,
+      "sample_index": 7,
+      "speedup": 0.0024287427578769303,
+      "total_pstack_ns": 6172741,
+      "width": 13
+    },
+    {
+      "decode_ns": 8672,
+      "dense_ns": 16848,
+      "encode_ns": 6304,
+      "lower_ns": 6016,
+      "prep_ns": 7824,
+      "request_bytes": 964,
+      "response_bytes": 193,
+      "roundtrip_ns": 7116040,
+      "sample_index": 8,
+      "speedup": 0.0023580601204558917,
+      "total_pstack_ns": 7144856,
+      "width": 13
+    },
+    {
+      "decode_ns": 2496,
+      "dense_ns": 13488,
+      "encode_ns": 8256,
+      "lower_ns": 1984,
+      "prep_ns": 8768,
+      "request_bytes": 831,
+      "response_bytes": 183,
+      "roundtrip_ns": 5774084,
+      "sample_index": 9,
+      "speedup": 0.002327287584969808,
+      "total_pstack_ns": 5795588,
+      "width": 13
+    }
+  ],
+  "samples": 10,
+  "stats": {
+    "decode_ns": {
+      "max": 19584.0,
+      "mean": 12979.3,
+      "min": 2496.0
+    },
+    "dense_ns": {
+      "max": 30928.0,
+      "mean": 23363.3,
+      "min": 13488.0
+    },
+    "encode_ns": {
+      "max": 17040.0,
+      "mean": 11715.3,
+      "min": 6304.0
+    },
+    "lower_ns": {
+      "max": 14368.0,
+      "mean": 9696.0,
+      "min": 1984.0
+    },
+    "prep_ns": {
+      "max": 23200.0,
+      "mean": 11886.4,
+      "min": 7824.0
+    },
+    "request_bytes": {
+      "max": 964.0,
+      "mean": 891.4,
+      "min": 744.0
+    },
+    "response_bytes": {
+      "max": 193.0,
+      "mean": 186.5,
+      "min": 176.0
+    },
+    "roundtrip_ns": {
+      "max": 7220904.0,
+      "mean": 6422154.6,
+      "min": 4925153.0
+    },
+    "speedup": {
+      "max": 0.006206392656678404,
+      "mean": 0.0036623384886302103,
+      "min": 0.002327287584969808
+    },
+    "total_pstack_ns": {
+      "max": 7273833.0,
+      "mean": 6468431.6,
+      "min": 4983249.0
+    }
+  },
+  "width": 13
+}

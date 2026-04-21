@@ -1,0 +1,5 @@
+{
+  "lean_file": "lean/HeytingLean/SternBrocot/Idempotence.lean",
+  "lemma": "HeytingLean.SternBrocot.stern_brocot_idempotent_on_bounded",
+  "commit": "6664a35489"
+}

@@ -1,0 +1,75 @@
+\section{Finite-Step Symbolic Extraction Under Stern--Brocot Projection}
+
+\paragraph{Setting.}
+Let \(D \ge 1\) be a denominator bound and let
+\(\Pi_D : \mathbb{Q} \to \mathbb{Q}\) denote Stern--Brocot projection to
+the denominator-\(\le D\) rational surface.  For a Rational KAN dictionary
+\(\Phi = (\phi_1,\ldots,\phi_m)\), write a model as
+\[
+  F_w(x) = \sum_{i=1}^{m} w_i \phi_i(x),
+  \qquad w \in \mathbb{Q}^m .
+\]
+The sparse-active large-dictionary regime is the case where \(m\) may be very
+large, but the update support
+\[
+  S_t = \{ i : \nabla_i L(w_t) \ne 0 \}
+\]
+is small for each training step.  The HZ/P4 substrate changes the cost of
+updating \(S_t\); it does not change the mathematical update rule.
+
+\paragraph{Projection lemma.}
+If \(q \in \mathbb{Q}\) has canonical denominator at most \(D\), then
+\[
+  \Pi_D(q) = q .
+\]
+The Lean hook for this lemma is
+\[
+\texttt{HeytingLean.SternBrocot.stern\_brocot\_idempotent\_on\_bounded}.
+\]
+The proof is by the defining branch of the bounded projection: rationals
+already lying on the denominator-\(\le D\) Stern--Brocot surface are fixed.
+This is the only projection fact consumed by the finite-step lock argument;
+nearest-rational optimality is not assumed.
+
+\paragraph{Theorem.}
+Let \(f \in \mathbb{Q}(x_1,\ldots,x_n)\) lie in the RKAN basis closure, and
+let \(w^\ast(f)\) be its canonical coefficient vector in that basis.  Assume:
+\[
+  \max_i \operatorname{den}(w_i^\ast) \le D,
+  \qquad
+  L(w) = \mathbb{E}_{x \sim \mu} (F_w(x)-f(x))^2
+\]
+has a unique global minimum at \(w^\ast\), and the exact-rational optimizer
+enters a coefficient cube \(B_\infty(w^\ast,\rho_D)\) in finite time, where
+\(\rho_D\) is any projection basin contained in the Voronoi cell of
+\(w^\ast\) for the denominator-\(\le D\) Stern--Brocot surface.  Then there is
+\(T_0 < \infty\) such that the projected trajectory satisfies
+\[
+  W_t = w^\ast \qquad \text{for all } t \ge T_0 .
+\]
+
+\paragraph{Proof.}
+At \(w^\ast\), \(F_{w^\ast}=f\) on the support of the training distribution,
+so \(L(w^\ast)=0\) and the exact rational gradient of the squared loss is
+zero.  Therefore the unprojected optimizer update leaves \(w^\ast\) fixed.
+By the projection lemma, applying \(\Pi_D\) coordinatewise also leaves
+\(w^\ast\) fixed because every coefficient denominator is at most \(D\).
+
+It remains to show finite-step lock once the trajectory is sufficiently close.
+The denominator-\(\le D\) rational surface is discrete in any bounded
+coefficient interval.  Hence every coefficient \(w_i^\ast\) has a positive
+separation radius from all other denominator-\(\le D\) rationals in the same
+bounded interval.  Choose \(\rho_D\) smaller than half the minimum separation
+over the finite active coefficient set.  If the unprojected update lands in
+this cube, coordinatewise Stern--Brocot projection maps every coefficient to
+\(w_i^\ast\), so the next projected state is exactly \(w^\ast\).  The
+assumed finite-time entry into the basin supplies \(T_0\).  Since \(w^\ast\)
+is a fixed point of the projected update, the equality persists for all
+later times.
+
+\paragraph{Interpretation.}
+The theorem is intentionally conditional.  It does not claim arbitrary KAN
+training converges, nor that out-of-basis targets become exact.  It states
+that when the target is inside the bounded rational basis closure and the
+optimizer reaches the Stern--Brocot basin, numerical training, bounded
+rational projection, and symbolic extraction collapse to the same fixed point.

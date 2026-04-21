@@ -1,0 +1,177 @@
+{
+  "commit": "fd9b286f5c",
+  "cpu": {
+    "batch_size": 16,
+    "benchmark_kind": "network_inference",
+    "bootstrap_samples": 1000,
+    "ci95_lower": 0.7743630172353385,
+    "ci95_upper": 1.0739289613602867,
+    "cuda_status": "not_requested",
+    "dense_backend": "python_fraction",
+    "device_executed": "cpu",
+    "device_requested": "cpu",
+    "mean_speedup": 0.9286179785770601,
+    "model_state": "seeded_pretraining",
+    "pstack_backend": "rust_hz_cli",
+    "rows": [
+      {
+        "active_levels": 161,
+        "dense_total_inference_ns": 1450304,
+        "output_hash_dense": "b831ed9f78fac60cecf7ad15e381dbaf6ac3d869d8dc305a47f31b733557c5a7",
+        "output_hash_pstack": "b831ed9f78fac60cecf7ad15e381dbaf6ac3d869d8dc305a47f31b733557c5a7",
+        "pstack_total_inference_ns": 3227620,
+        "sample_index": 0,
+        "seed": 20270420,
+        "speedup_ratio": 0.44934162014115664,
+        "support_count": 410,
+        "witness_bytes": 428
+      },
+      {
+        "active_levels": 151,
+        "dense_total_inference_ns": 1423264,
+        "output_hash_dense": "70623364d559887548fa5c3b13e07516ccfb327ca63540fa93c1e7e1839db7e0",
+        "output_hash_pstack": "70623364d559887548fa5c3b13e07516ccfb327ca63540fa93c1e7e1839db7e0",
+        "pstack_total_inference_ns": 1551361,
+        "sample_index": 1,
+        "seed": 20270517,
+        "speedup_ratio": 0.9174292766158232,
+        "support_count": 386,
+        "witness_bytes": 419
+      },
+      {
+        "active_levels": 147,
+        "dense_total_inference_ns": 1405120,
+        "output_hash_dense": "3a5ba77dc50c940cfcfeddc8b8fda78d6ab39e2149d80fbd26471e101eeb4c5e",
+        "output_hash_pstack": "3a5ba77dc50c940cfcfeddc8b8fda78d6ab39e2149d80fbd26471e101eeb4c5e",
+        "pstack_total_inference_ns": 1632834,
+        "sample_index": 2,
+        "seed": 20270614,
+        "speedup_ratio": 0.8605406305846155,
+        "support_count": 366,
+        "witness_bytes": 410
+      },
+      {
+        "active_levels": 155,
+        "dense_total_inference_ns": 1437168,
+        "output_hash_dense": "fce9e227c1f1b4a5b2c779a9c6083bbd50c73772efefbb782afd4f3934c9b8f8",
+        "output_hash_pstack": "fce9e227c1f1b4a5b2c779a9c6083bbd50c73772efefbb782afd4f3934c9b8f8",
+        "pstack_total_inference_ns": 1453664,
+        "sample_index": 3,
+        "seed": 20270711,
+        "speedup_ratio": 0.9886521231866511,
+        "support_count": 392,
+        "witness_bytes": 424
+      },
+      {
+        "active_levels": 151,
+        "dense_total_inference_ns": 1396863,
+        "output_hash_dense": "d0a96605075ab793e0dddad92c15b208c7d6458d82a7060d792fdc12a0241a31",
+        "output_hash_pstack": "d0a96605075ab793e0dddad92c15b208c7d6458d82a7060d792fdc12a0241a31",
+        "pstack_total_inference_ns": 1396943,
+        "sample_index": 4,
+        "seed": 20270808,
+        "speedup_ratio": 0.9999427320942945,
+        "support_count": 378,
+        "witness_bytes": 411
+      },
+      {
+        "active_levels": 155,
+        "dense_total_inference_ns": 1393087,
+        "output_hash_dense": "3b25f5391f02f1c9fe106c1b738da41bb5c6a92725ad9dea4ece0102b1266b25",
+        "output_hash_pstack": "3b25f5391f02f1c9fe106c1b738da41bb5c6a92725ad9dea4ece0102b1266b25",
+        "pstack_total_inference_ns": 1278238,
+        "sample_index": 5,
+        "seed": 20270905,
+        "speedup_ratio": 1.0898494646536874,
+        "support_count": 394,
+        "witness_bytes": 415
+      },
+      {
+        "active_levels": 165,
+        "dense_total_inference_ns": 1392175,
+        "output_hash_dense": "91dee0cf9d964f94ab5ff2b03bb97466c5bb9a5e7aafa077c5fb86220b3fdb80",
+        "output_hash_pstack": "91dee0cf9d964f94ab5ff2b03bb97466c5bb9a5e7aafa077c5fb86220b3fdb80",
+        "pstack_total_inference_ns": 1553377,
+        "sample_index": 6,
+        "seed": 20271002,
+        "speedup_ratio": 0.8962248056975223,
+        "support_count": 416,
+        "witness_bytes": 443
+      },
+      {
+        "active_levels": 158,
+        "dense_total_inference_ns": 1348047,
+        "output_hash_dense": "b5f2ecd88638729a7fb0a9b41b3cd16213a203d249c1eccf16ed851373d2ede1",
+        "output_hash_pstack": "b5f2ecd88638729a7fb0a9b41b3cd16213a203d249c1eccf16ed851373d2ede1",
+        "pstack_total_inference_ns": 2254649,
+        "sample_index": 7,
+        "seed": 20271099,
+        "speedup_ratio": 0.5978966127321814,
+        "support_count": 388,
+        "witness_bytes": 425
+      },
+      {
+        "active_levels": 155,
+        "dense_total_inference_ns": 2138855,
+        "output_hash_dense": "d974572b9d55e8f0fc09d14a631a696eb79e8943438ef9ba93adfe8625805248",
+        "output_hash_pstack": "d974572b9d55e8f0fc09d14a631a696eb79e8943438ef9ba93adfe8625805248",
+        "pstack_total_inference_ns": 1548769,
+        "sample_index": 8,
+        "seed": 20271196,
+        "speedup_ratio": 1.3810032354728174,
+        "support_count": 386,
+        "witness_bytes": 430
+      },
+      {
+        "active_levels": 147,
+        "dense_total_inference_ns": 1402543,
+        "output_hash_dense": "f00c4f58f5c0831ab266b411317658db0892a35b4d86fdeeb7067beb75a3ea31",
+        "output_hash_pstack": "f00c4f58f5c0831ab266b411317658db0892a35b4d86fdeeb7067beb75a3ea31",
+        "pstack_total_inference_ns": 1268926,
+        "sample_index": 9,
+        "seed": 20271293,
+        "speedup_ratio": 1.1052992845918517,
+        "support_count": 374,
+        "witness_bytes": 418
+      }
+    ],
+    "samples": 10,
+    "speedup_gate": false
+  },
+  "cuda": null,
+  "host_cpu": "unknown",
+  "speedup_gate": false,
+  "thermal_state_start": {
+    "available": true,
+    "zones": [
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone0"
+      },
+      {
+        "millidegrees_c": 52500,
+        "zone": "thermal_zone1"
+      },
+      {
+        "millidegrees_c": 55100,
+        "zone": "thermal_zone2"
+      },
+      {
+        "millidegrees_c": 52600,
+        "zone": "thermal_zone3"
+      },
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone4"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone5"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone6"
+      }
+    ]
+  }
+}

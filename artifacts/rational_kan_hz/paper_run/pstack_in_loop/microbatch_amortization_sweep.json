@@ -1,0 +1,145 @@
+{
+  "any_speedup_gate": false,
+  "batch_size": 16,
+  "benchmark_kind": "update_microbatch_amortization_sweep",
+  "commit": "fd9b286f5c",
+  "crossover_microbatches": null,
+  "grid": [
+    1,
+    4,
+    8,
+    16,
+    32,
+    64,
+    128
+  ],
+  "host_cpu": "unknown",
+  "model_state": "seeded_pretraining",
+  "rows": [
+    {
+      "ci95_lower": 0.02040663009668664,
+      "ci95_upper": 0.022575237580946966,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 2477236.9,
+      "mean_pstack_distinct_denominators": 168.0,
+      "mean_pstack_total_update_ns": 116468548.3,
+      "mean_pstack_witness_bytes": 21646.3,
+      "mean_speedup": 0.02137005353529726,
+      "microbatches": 1,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.036226706954909385,
+      "ci95_upper": 0.039923262075082656,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 10251960.0,
+      "mean_pstack_distinct_denominators": 237.7,
+      "mean_pstack_total_update_ns": 270251297.0,
+      "mean_pstack_witness_bytes": 88035.5,
+      "mean_speedup": 0.038124547654295106,
+      "microbatches": 4,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.05053264204471029,
+      "ci95_upper": 0.05167301210452584,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 20715304.3,
+      "mean_pstack_distinct_denominators": 277.4,
+      "mean_pstack_total_update_ns": 405385869.9,
+      "mean_pstack_witness_bytes": 175414.2,
+      "mean_speedup": 0.0510986856540316,
+      "microbatches": 8,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.06121058178757806,
+      "ci95_upper": 0.06336694919627367,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 41757409.5,
+      "mean_pstack_distinct_denominators": 291.4,
+      "mean_pstack_total_update_ns": 669943813.8,
+      "mean_pstack_witness_bytes": 350527.9,
+      "mean_speedup": 0.06233830470615519,
+      "microbatches": 16,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.0700256760716291,
+      "ci95_upper": 0.07149026754986429,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 82771476.5,
+      "mean_pstack_distinct_denominators": 300.9,
+      "mean_pstack_total_update_ns": 1171133519.2,
+      "mean_pstack_witness_bytes": 702666.7,
+      "mean_speedup": 0.07068113664001643,
+      "microbatches": 32,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.07547153208318559,
+      "ci95_upper": 0.07727393093241827,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 162761109.6,
+      "mean_pstack_distinct_denominators": 305.0,
+      "mean_pstack_total_update_ns": 2130704198.2,
+      "mean_pstack_witness_bytes": 1400151.3,
+      "mean_speedup": 0.07639167111145458,
+      "microbatches": 64,
+      "samples": 10,
+      "speedup_gate": false
+    },
+    {
+      "ci95_lower": 0.07902096074864028,
+      "ci95_upper": 0.08198795335162672,
+      "hash_parity_passed": true,
+      "mean_dense_total_update_ns": 325427504.8,
+      "mean_pstack_distinct_denominators": 306.0,
+      "mean_pstack_total_update_ns": 4041457671.1,
+      "mean_pstack_witness_bytes": 2808961.1,
+      "mean_speedup": 0.0805408699556079,
+      "microbatches": 128,
+      "samples": 10,
+      "speedup_gate": false
+    }
+  ],
+  "samples_per_point": 10,
+  "thermal_state_start": {
+    "available": true,
+    "zones": [
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone0"
+      },
+      {
+        "millidegrees_c": 52500,
+        "zone": "thermal_zone1"
+      },
+      {
+        "millidegrees_c": 55100,
+        "zone": "thermal_zone2"
+      },
+      {
+        "millidegrees_c": 52600,
+        "zone": "thermal_zone3"
+      },
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone4"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone5"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone6"
+      }
+    ]
+  }
+}

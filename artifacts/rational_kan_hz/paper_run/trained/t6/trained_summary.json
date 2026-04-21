@@ -1,0 +1,83 @@
+{
+  "target_id": "t6",
+  "basis": [
+    "x_0**2",
+    "x_1",
+    "x_1**3",
+    "x_1**5"
+  ],
+  "oracle_coefficients": [
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": -1,
+      "den": 6
+    },
+    {
+      "num": 1,
+      "den": 120
+    }
+  ],
+  "devices": [
+    {
+      "device": "cuda",
+      "samples": 3,
+      "exact_count": 3,
+      "mean_wall_clock_ns": 1445616448.6666667,
+      "wall_clock_ci95_lower": 1196399082.0,
+      "wall_clock_ci95_upper": 1669471762.0,
+      "mean_final_val_mse": 9.424587141786706e-24,
+      "val_mse_ci95_lower": 5.442019834344397e-24,
+      "val_mse_ci95_upper": 1.6580887198554312e-23,
+      "passed": true
+    },
+    {
+      "device": "cpu",
+      "samples": 3,
+      "exact_count": 3,
+      "mean_wall_clock_ns": 299829481.3333333,
+      "wall_clock_ci95_lower": 292380274.0,
+      "wall_clock_ci95_upper": 313558144.0,
+      "mean_final_val_mse": 9.933284755942363e-24,
+      "val_mse_ci95_lower": 6.124735235603307e-24,
+      "val_mse_ci95_upper": 1.5289114022320063e-23,
+      "passed": true
+    }
+  ],
+  "samples_total": 6,
+  "steps": 4000,
+  "train_points": 10000,
+  "val_points": 2000,
+  "lr": 0.05,
+  "denominator_bound": 1000000,
+  "representative_device": "cuda",
+  "representative_seed": 21260426,
+  "representative_steps_executed": 3000,
+  "representative_final_val_mse": 6.25085439246141e-24,
+  "representative_coefficient_max_abs_error": 0.0,
+  "extracted_expression": "(120*x_0**2 + x_1**5 - 20*x_1**3 + 120*x_1)/120",
+  "symbolic_residual": "0",
+  "semantic_faithfulness_passed": true,
+  "exact_match_all_runs": true,
+  "val_threshold_all_runs": true,
+  "threshold": 1e-06,
+  "threshold_source": "PM T1.3 target 6",
+  "artifact_files": {
+    "sympy": "artifacts/rational_kan_hz/paper_run/trained/t6/t6_trained_expression.sympy",
+    "tex": "artifacts/rational_kan_hz/paper_run/trained/t6/t6_trained_expression.tex",
+    "pdf": "artifacts/rational_kan_hz/paper_run/trained/t6/t6_trained_expression.pdf",
+    "certificate": "artifacts/rational_kan_hz/paper_run/trained/t6/t6_trained_expression_certificate.json",
+    "pdf_compiled": true,
+    "latex_presentation_passed": true,
+    "semantic_faithfulness_passed": true
+  },
+  "rows_path": "artifacts/rational_kan_hz/paper_run/trained/t6/trained_rows.json",
+  "passed": true,
+  "commit": "bb6703b45b"
+}

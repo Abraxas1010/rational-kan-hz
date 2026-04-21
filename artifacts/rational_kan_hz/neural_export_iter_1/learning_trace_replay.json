@@ -1,0 +1,11 @@
+{
+  "records_examined": 6,
+  "chain_break_records": 0,
+  "malformed_hash_records": 0,
+  "coefficients_match_learned_weights": true,
+  "final_training_mse": "0/1",
+  "final_validation_mse": "0/1",
+  "loss_converged_exactly": true,
+  "weights_hash": "e0c73dec9c51f014e4f344c928e5cbf02f67cea2b83f8bb32f534e1576033963",
+  "passed": true
+}

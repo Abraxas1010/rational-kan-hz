@@ -1,0 +1,14 @@
+.venv/
+.pytest_cache/
+__pycache__/
+*.pyc
+*.egg-info/
+.lake/
+.build/
+build/
+lake-packages/
+bench/hybrid_zeckendorf/target/
+*.olean
+*.ilean
+*.trace
+lake-manifest.json

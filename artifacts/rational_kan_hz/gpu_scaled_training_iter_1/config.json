@@ -1,0 +1,15 @@
+{
+  "samples": 30,
+  "seed": 20260420,
+  "feature_count": 1000000,
+  "steps": 1000,
+  "warmup_steps": 25,
+  "batch_size": 65536,
+  "validation_samples": 262144,
+  "lr": 0.03,
+  "dtype": "float32",
+  "progress_every": 500,
+  "coefficient_tolerance": 0.0005,
+  "validation_mse_threshold": 1e-08,
+  "rational_denominator_bound": 1024
+}

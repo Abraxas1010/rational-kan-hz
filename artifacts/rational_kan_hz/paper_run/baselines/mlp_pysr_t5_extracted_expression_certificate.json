@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "e^{0.25191337 x_{0} x_{1}} e^{0.0320093698399163 x_{0}^{2} x_{1}^{2}}",
+    "latex_sha256": "e0ec78f77c57deffb2be238d5a71aae9dcefe4cd8c5df2ca6a1224823c37b26a",
+    "sympy_expression_sha256": "51831e3ebcfa6e1574d88f4e3d6b3c70b011e0e5a8b5c904ec53371a65419026",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "e**(0.0320093698399163*x_0**2*x_1**2 + 0.25191337*x_0*x_1)",
+    "latex_roundtrip_residual": "e**(0.25191337*x_0*x_1)*e**(0.0320093698399163*x_0**2*x_1**2) - exp(0.25191337*x_0*x_1)*exp(0.0320093698399163*x_0**2*x_1**2)",
+    "latex_roundtrip_passed": false,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "(x_0*x_1*exp(0.25191337*x_0*x_1)*exp(0.0320093698399163*x_0**2*x_1**2) - 4*exp(0.25191337*x_0*x_1)*exp(0.0320093698399163*x_0**2*x_1**2) + 4)/(x_0*x_1 - 4)",
+    "semantic_faithfulness_passed": false,
+    "faithfulness_kind": "approximate_numeric",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

@@ -1,0 +1,239 @@
+[
+  {
+    "target_id": "t6",
+    "device": "cpu",
+    "seed": 20260426,
+    "steps_requested": 4000,
+    "steps_executed": 3000,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 1.5040216761049692e-23,
+    "final_val_mse": 1.5289114022320063e-23,
+    "best_val_mse": 1.5289114022320063e-23,
+    "coefficients_float": [
+      1.000000000000006,
+      0.9999999999750903,
+      -0.16666666655799628,
+      0.00833333323712783
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": -1,
+        "den": 6
+      },
+      {
+        "num": 1,
+        "den": 120
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 313558144,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 80000
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60600
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 67200
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60800
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 80000
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 61000
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 66300
+        }
+      ],
+      "available": true
+    }
+  },
+  {
+    "target_id": "t6",
+    "device": "cpu",
+    "seed": 20325963,
+    "steps_requested": 4000,
+    "steps_executed": 3000,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 6.220875814820838e-24,
+    "final_val_mse": 6.124735235603307e-24,
+    "best_val_mse": 6.124735235603307e-24,
+    "coefficients_float": [
+      1.0000000000000475,
+      0.9999999999840326,
+      -0.16666666659766546,
+      0.008333333272741479
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": -1,
+        "den": 6
+      },
+      {
+        "num": 1,
+        "den": 120
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 292380274,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 80400
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60500
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 69000
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60700
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 80400
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 60900
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 66200
+        }
+      ],
+      "available": true
+    }
+  },
+  {
+    "target_id": "t6",
+    "device": "cpu",
+    "seed": 20391500,
+    "steps_requested": 4000,
+    "steps_executed": 3000,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 7.987625990333451e-24,
+    "final_val_mse": 8.386005009903723e-24,
+    "best_val_mse": 8.386005009903723e-24,
+    "coefficients_float": [
+      1.000000000000137,
+      0.9999999999817366,
+      -0.16666666658732215,
+      0.008333333263317918
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": 1,
+        "den": 1
+      },
+      {
+        "num": -1,
+        "den": 6
+      },
+      {
+        "num": 1,
+        "den": 120
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 293550026,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 81000
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60500
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 67000
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60900
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 81000
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 60900
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 66300
+        }
+      ],
+      "available": true
+    }
+  }
+]

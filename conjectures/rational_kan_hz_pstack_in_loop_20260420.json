@@ -1,0 +1,105 @@
+{
+  "id": "rational_kan_hz_pstack_in_loop_20260420",
+  "version": 2,
+  "statement": "An exact-rational KAN with degree at least 8 and hidden width at least 10 can run the forward/backward/training loop through the Hybrid Zeckendorf P-stack substrate with bit-identical Fraction semantics at network scale.",
+  "intent": "Establish in-the-loop parity between the exact-rational KAN training/inference path and the Hybrid Zeckendorf P-stack substrate on the actual forward/backward/update lane, without weakening semantics or hiding materialization cost. The speed advantage clause was split out into rational_kan_hz_pstack_speed_regime_20260420 because empirical evidence (width sweep, microbatch sweep) showed HZ's advantage is regime-dependent (dictionary-scale, small operand magnitudes) and does not transfer to dense rational-KAN inference at operand-magnitude regime 1e5-1e6.",
+  "status": "proved",
+  "priority": "medium",
+  "dependencies": {
+    "blocks": [],
+    "depends_on": []
+  },
+  "subgoals": {
+    "total": 0,
+    "closed": 0
+  },
+  "approaches": [
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "Repo-map and anti-hack PM specification",
+      "outcome": "proved",
+      "pre_search": {
+        "internal": [
+          "Mapped existing surfaces: fraction_oracle.py ready; rkan_boundary_train.py partial exact SGD; rkan_p4_training_equivalence.py partial sparse normal-equation lane only; rkan_p_stack_wiring.py partial surrogate speed gate only; bench/hybrid_zeckendorf flat_hybrid.rs ready; rational.rs partial."
+        ],
+        "external": [],
+        "offline_mode": false
+      }
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "CREDO hostile audit of claimed SUBMISSION-READY P-stack-in-loop artifacts",
+      "outcome": "partial",
+      "pre_search": {
+        "internal": [
+          "Read artifacts/rational_kan_hz/paper_run/pstack_in_loop/{inference_speedup,summary,report}.{json,md}. Read projects/rational_kan_hz/src/rkan_hz/rkan_pstack_training.py and bench/hybrid_zeckendorf/src/bin/pstack_exact_accumulate.rs."
+        ],
+        "external": [],
+        "offline_mode": false
+      },
+      "reflexion": "Hostile audit (CREDO Meta-Principles A and B) revealed four defects that together make the prior status=proved indefensible: (1) Degeneracy Blindness (Meta-A): inference_speedup.json has samples=1 with CI95 lower and upper identical (0.00012359597461412709 = 0.00012359597461412709); bootstrap on n=1 is vacuous - the CI is literally the single observation, not a statistical interval, and the 'speedup_gate: ci95_lower > 1.0' test was run on that degenerate CI. (2) Name-Content Drift (Meta-A): the conjecture statement requires 'a measurable inference speed advantage at network scale', which is precisely what speedup_gate=False refutes for the current measurement; despite that, the conjecture JSON was flipped to status=proved. (3) Enforcement Gap (Meta-B): the PStackAccumulatorWorker is a persistent Popen (good - not per-call subprocess), but the measurement did not decompose the 9.2s/batch=4 into bridge IO vs Rust-side HZ decomposition vs batch_readout, so the finding 'HZ is 8100x slower' is a raw datapoint without a diagnosis. (4) Workload mismatch hypothesis (Meta-C understand-before-prescribing): the HZ P-stack has independent evidence of speedup at 10K-10M dictionary features (T1.5 lane, 44x at 10M); at rational-KAN degree 8 / hidden 10 scale the per-group term count is O(~13) sparse, well below any reasonable crossover point. The HZ decomposition of LCM-scaled integers (possibly 1e60+ magnitudes at degree 8 over denominator 1e6) dominates the accumulator cost, while GMP-backed python Fraction handles the same 13-term sum in microseconds. Remediation in progress: (a) revert conjecture status to partial; (b) re-run with samples=30 for a real CI; (c) profile the bridge breakdown; (d) sweep terms-per-group to locate W* empirically; (e) based on the sweep, either narrow the conjecture to the demonstrated scale or split it into parity-at-scale plus speedup-at-width."
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "Diagnostic remediation: profile + width sweep + samples=30 rerun, then honest narrative",
+      "outcome": "partial",
+      "pre_search": {
+        "internal": [
+          "Ran projects/rational_kan_hz/src/rkan_hz/rkan_pstack_diagnose.py against the persistent PStackAccumulatorWorker (bench/hybrid_zeckendorf/pstack_exact_accumulate.rs, backend hz_lazy). Regenerated artifacts/rational_kan_hz/paper_run/pstack_in_loop/{inference_speedup,summary,report}.{json,md} and PAPER_RUN_REPORT.md."
+        ],
+        "external": [],
+        "offline_mode": false
+      },
+      "reflexion": "Evidence (all under artifacts/rational_kan_hz/paper_run/pstack_in_loop/). (A) bridge_overhead_breakdown.json, width=13, 10 calls: total pstack=6.47 ms, python prep 0.18 percent, json encode 0.18 percent, subprocess+Rust roundtrip 99.28 percent, json decode 0.20 percent, python lower 0.15 percent; dense Fraction baseline 23 us. Conclusion: bridge mechanics are not the bottleneck; 99+ percent of pstack time is inside the Rust HZ primitive (from_legacy decomposition, add_lazy_mut, batch_readout, to_string). Migrating to FFI or a binary protocol cannot recover 131x, let alone cross 1.0x. (B) width_sweep.json across widths {10, 50, 200, 500} with random rationals in +-1e5/1e6: mean speedup decreases monotonically {0.00280, 0.00067, 0.00018, 6.4e-5}. No crossover found below 500. Operand-magnitude growth with width defeats HZ amortization at this regime; T1.5 dictionary speedup (44x at 10M small-magnitude features) does NOT transfer to dense rational KAN inference. (C) inference_speedup_samples30.json: samples=30, mean speedup 0.00764, CI95 [0.00383, 0.01169] - a real statistical interval replacing the vacuous samples=1 version. speedup_gate still False by two orders of magnitude. Consequences: (1) Updated summary.json with diagnostic fields and speedup_gate_reason; (2) Rewrote report.md with honest narrative separating parity (proved) from speedup (refuted at this workload class); (3) Overwrote inference_speedup.json with the samples=30 data; (4) Regenerated PAPER_RUN_REPORT.md - banner now correctly reads PIPELINE-CERTIFIED-TRAINING-PARTIAL (pstack_in_loop_gate=False propagated through the status_tier logic at rkan_paper_run.py:1432-1438). Honest decision for the conjecture statement: parity clause is genuinely proved at KAN degree>=8/hidden>=10; speedup clause is refuted for dense rational-KAN inference at operand-magnitude regime 1e5/1e6 and cannot be rescued by bridge engineering. Recommend splitting the conjecture into a parity-only conjecture (provable now) and a speedup conjecture scoped to T1.5 dictionary workload (already evidenced independently). Not doing the split automatically - it is a user-level scope decision."
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "Filesystem-truth remediation: emit distinct inference/update artifacts, add microbatch amortization sweep, and restore clause-mapped reporting",
+      "outcome": "partial",
+      "pre_search": {
+        "internal": [
+          "Read artifacts/rational_kan_hz/paper_run/pstack_in_loop/{update_speedup,inference_speedup,microbatch_amortization_sweep,report,summary}.json{,l,md} and projects/rational_kan_hz/src/rkan_hz/rkan_pstack_training.py. Verified cmp -s update_speedup.json inference_speedup.json returns nonzero after regeneration."
+        ],
+        "external": [],
+        "offline_mode": false
+      },
+      "reflexion": "This remediation closed the remaining Meta-A filesystem/report drift without laundering the conjecture's speed clause. (1) Name-content drift removed: update_speedup.json now contains only the amortized training-update lane, while inference_speedup.json now contains a real network_inference benchmark; cmp confirms the files are distinct. (2) Clause mapping restored on disk: report.md now separates exact semantics, network-scale witness, update-lane diagnosis, microbatch sweep, and inference-lane clause status. (3) Live update lane: mean speedup 0.07126, CI95 [0.07012, 0.07241] at microbatches=32, still below 1.0. (4) Live inference lane: mean speedup 0.92862, CI95 [0.77436, 1.07393] at batch_size=16 on the seeded-pretraining degree-8/hidden-10 network. This is no longer the catastrophic 0.0076 regime from the old LCM-collapse bridge, but it still does not pass the conjecture's inference-speed gate because the CI lower bound remains below 1.0. (5) Microbatch amortization sweep over m in {1,4,8,16,32,64,128} is monotone improving {0.02137, 0.03812, 0.05110, 0.06234, 0.07068, 0.07639, 0.08054} with no crossover; crossover_microbatches=null. Consequence: parity and scale clauses are proved, the corrected architecture meaningfully improves the speed picture, but the current conjecture remains partial until the user narrows or splits the speed clause."
+    },
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "Scope split: retire speed clause, close this conjecture as parity+scale, create rational_kan_hz_pstack_speed_regime_20260420 for the speed-regime open question",
+      "outcome": "proved",
+      "pre_search": {
+        "internal": [
+          "Re-read conjectures/rational_kan_hz_pstack_in_loop_20260420.json (all four prior approaches) and Blueprint/proof_trees/rational_kan_hz_pstack_in_loop_20260420.json (Phase 0..4). User explicit decision (2026-04-20): 'Split, remediate as needed quickly.'"
+        ],
+        "external": [],
+        "offline_mode": false
+      },
+      "reflexion": "The original statement bundled two orthogonal clauses: (a) bit-identical Fraction semantics at network scale, and (b) measurable inference speed advantage at network scale. Evidence from approach 3 (width sweep) and approach 4 (microbatch sweep, inference/update lanes) demonstrates that (a) is genuine at degree>=8/hidden>=10 while (b) is regime-bounded: HZ wins at dictionary-scale, small-magnitude accumulation (T1.5 regime, 44x at 10M features; evidenced in artifacts/rational_kan_hz/paper_run/scaling/) and loses at dense rational-KAN inference/update at operand-magnitude regime 1e5-1e6. Carrying both clauses under one conjecture forced a partial status that was actually two different outcomes masquerading as one. The split resolution: (1) narrow this conjecture to the parity+scale clause only; (2) mark status=proved - parity_gate True on all 10 samples of artifacts/rational_kan_hz/paper_run/pstack_in_loop/bitwise_parity_log.jsonl (8.6 MB), scale_gate True (degree=8, hidden=10, active_hidden_units=6, active_edge_terms=216, param_count=371), 9 pytest cases pass in projects/rational_kan_hz/tests/test_pstack_in_loop.py including test_training_step_bit_identical; (3) create rational_kan_hz_pstack_speed_regime_20260420 to hold the speed-regime open question with the microbatch sweep and width sweep as its evidence floor. This resolves the Name-Content Drift at the conjecture level - the label now promises only what the measurements confirm. The speed artifacts (update_speedup.json, inference_speedup.json, microbatch_amortization_sweep.json, width_sweep.json, bridge_overhead_breakdown.json) remain co-located under the same paper_run/pstack_in_loop/ directory because they are jointly diagnostic of the same substrate; their ownership in the conjecture ledger is the only thing that moves."
+    }
+  ],
+  "resolution": {
+    "type": "genuine",
+    "date": "2026-04-20",
+    "yields": "Bit-identical Fraction parity across forward/backward/training-update lanes of a degree=8, hidden=10, input_dim=4 exact-rational KAN (param_count=371) routed through the Hybrid Zeckendorf P-stack substrate via FactoredRationalLazyAccumulator. Witnessed by (a) artifacts/rational_kan_hz/paper_run/pstack_in_loop/bitwise_parity_log.jsonl with output_hash_dense == output_hash_pstack on all 10 benchmark samples; (b) artifacts/rational_kan_hz/paper_run/pstack_in_loop/summary.json with parity_gate=True, scale_gate=True; (c) projects/rational_kan_hz/tests/test_pstack_in_loop.py 9 passed (forward, backward, training-step, factored-sum-groups, network-scale, benchmark-schema, run-emits-artifacts). The denominator-factored lazy-accumulation architecture (split fractions by denominator into per-denominator integer groups, HZ-accumulate once, reassemble as Fraction at readout) is what makes bit-identity compatible with lazy HZ semantics at this network scale. Speed clause split out into rational_kan_hz_pstack_speed_regime_20260420 on 2026-04-20 per user decision; the evidence floor for that conjecture (update_speedup.json mean 0.07126, inference_speedup.json mean 0.92862, microbatch_amortization_sweep.json monotone to 0.0805 at m=128 with no crossover, width_sweep.json, bridge_overhead_breakdown.json with 99.28 percent in Rust HZ primitive, T1.5 scaling artifacts with 44.17x at 10M features) is co-located under artifacts/rational_kan_hz/paper_run/ and referenced by the new conjecture's approach[0]."
+  },
+  "metadata": {
+    "created": "2026-04-20",
+    "created_by": "abraxas",
+    "tags": [
+      "split-resolved"
+    ],
+    "last_touched": "2026-04-20"
+  }
+}

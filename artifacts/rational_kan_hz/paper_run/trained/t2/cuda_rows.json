@@ -1,0 +1,194 @@
+[
+  {
+    "target_id": "t2",
+    "device": "cuda",
+    "seed": 21260422,
+    "steps_requested": 2500,
+    "steps_executed": 500,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 9.634419885432381e-24,
+    "final_val_mse": 9.613837596680057e-24,
+    "best_val_mse": 9.613837596680057e-24,
+    "coefficients_float": [
+      0.9999999999952967
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 460368387,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 72100
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60200
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 63400
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60800
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 72100
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 59700
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 63600
+        }
+      ],
+      "available": true
+    }
+  },
+  {
+    "target_id": "t2",
+    "device": "cuda",
+    "seed": 21325959,
+    "steps_requested": 2500,
+    "steps_executed": 500,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 9.976808773706362e-24,
+    "final_val_mse": 1.0195181684116564e-23,
+    "best_val_mse": 1.0195181684116564e-23,
+    "coefficients_float": [
+      0.9999999999952965
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 195280584,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 72400
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60100
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 63200
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60800
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 72400
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 59900
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 63600
+        }
+      ],
+      "available": true
+    }
+  },
+  {
+    "target_id": "t2",
+    "device": "cuda",
+    "seed": 21391496,
+    "steps_requested": 2500,
+    "steps_executed": 500,
+    "train_points": 10000,
+    "val_points": 2000,
+    "lr": 0.05,
+    "denominator_bound": 1000000,
+    "final_train_mse": 9.917451027106504e-24,
+    "final_val_mse": 1.0383816872201493e-23,
+    "best_val_mse": 1.0383816872201493e-23,
+    "coefficients_float": [
+      0.9999999999952967
+    ],
+    "coefficients_rationalized": [
+      {
+        "num": 1,
+        "den": 1
+      }
+    ],
+    "coefficient_max_abs_error": 0.0,
+    "exact_match": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "wall_clock_ns": 263053261,
+    "commit": "bb6703b45b",
+    "host_cpu": "aarch64",
+    "platform": "Linux-6.14.0-1015-nvidia-aarch64-with-glibc2.39",
+    "thermal_state_start": {
+      "zones": [
+        {
+          "zone": "thermal_zone0",
+          "millidegrees_c": 73200
+        },
+        {
+          "zone": "thermal_zone1",
+          "millidegrees_c": 60100
+        },
+        {
+          "zone": "thermal_zone2",
+          "millidegrees_c": 63100
+        },
+        {
+          "zone": "thermal_zone3",
+          "millidegrees_c": 60900
+        },
+        {
+          "zone": "thermal_zone4",
+          "millidegrees_c": 73200
+        },
+        {
+          "zone": "thermal_zone5",
+          "millidegrees_c": 60100
+        },
+        {
+          "zone": "thermal_zone6",
+          "millidegrees_c": 63700
+        }
+      ],
+      "available": true
+    }
+  }
+]

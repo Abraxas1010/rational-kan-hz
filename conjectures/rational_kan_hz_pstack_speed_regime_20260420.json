@@ -1,0 +1,42 @@
+{
+  "id": "rational_kan_hz_pstack_speed_regime_20260420",
+  "version": 1,
+  "statement": "There exists a regime (microbatch count m*, network width w*, or workload class) in which the Hybrid Zeckendorf P-stack, routed through the denominator-factored FactoredRationalLazyAccumulator, achieves a measurable speedup (CI95 lower bound > 1.0) over GMP-backed python Fraction on the exact-rational KAN training/inference substrate. Existing evidence bounds the regime: (i) no crossover observed in microbatch sweep m in {1,4,8,16,32,64,128} on the degree=8/hidden=10 network (monotone improving from 0.0214 to 0.0805, never above 1.0); (ii) no crossover observed in width sweep w in {10,50,200,500} at operand-magnitude range 1e5-1e6 (monotone decreasing from 0.0028 to 6.4e-5); (iii) independent T1.5 dictionary-scale evidence at 10M small-magnitude features shows 44.17x HZ speedup over the dense baseline (artifacts/rational_kan_hz/paper_run/scaling/10m_features_dual.jsonl). The conjecture asserts that the boundary between these regimes admits a characterization and that at least one exact-rational KAN-relevant configuration crosses 1.0x.",
+  "intent": "Capture the honest open question left over after splitting rational_kan_hz_pstack_in_loop_20260420. The parity+scale clause closed genuine on 2026-04-20; the speed clause did not, and its resolution depends on regime characterization rather than further bridge engineering (bridge_overhead_breakdown.json demonstrates 99.28 percent of P-stack time is inside the Rust HZ primitive, so FFI migration cannot move the gate). The conjecture should be resolved by one of: (a) extending the microbatch sweep to find crossover; (b) characterizing a dense rational-KAN configuration (lower operand magnitudes, different width/degree trade-off) that crosses; (c) proving no crossover exists in any realistic rational-KAN regime and scoping HZ's advantage to dictionary-scale (T1.5) workloads only; (d) algorithmic change to the HZ decomposition (e.g., native integer groups without LCM prep) that shifts W*.",
+  "status": "partial",
+  "priority": "medium",
+  "dependencies": {
+    "blocks": [],
+    "depends_on": []
+  },
+  "subgoals": {
+    "total": 0,
+    "closed": 0
+  },
+  "approaches": [
+    {
+      "date": "2026-04-20",
+      "agent": "abraxas",
+      "machine": "spark-305b",
+      "strategy": "Inherit evidence floor from rational_kan_hz_pstack_in_loop_20260420 split",
+      "outcome": "partial",
+      "pre_search": {
+        "internal": [
+          "Evidence already on disk: artifacts/rational_kan_hz/paper_run/pstack_in_loop/{update_speedup,inference_speedup,microbatch_amortization_sweep,width_sweep,bridge_overhead_breakdown,inference_speedup_samples30}.json. Independent T1.5 scaling: artifacts/rational_kan_hz/paper_run/scaling/10m_features_dual.jsonl with 44.17x at 10M features. Architecture: projects/rational_kan_hz/src/rkan_hz/rkan_pstack_training.py FactoredRationalLazyAccumulator + PStackAccumulatorWorker."
+        ],
+        "external": [],
+        "offline_mode": false
+      },
+      "reflexion": "The split carries three pieces of evidence into this conjecture without rerunning them. (1) Microbatch monotonicity at degree=8/hidden=10: update-lane speedup is {0.0214, 0.0381, 0.0511, 0.0623, 0.0707, 0.0764, 0.0805} for m in {1,4,8,16,32,64,128}. Fitted trend is sub-linear in m, so naive extrapolation would require m > 10000 to approach 1.0 - almost certainly not realizable with the current per-microbatch gradient workload. (2) Width monotonicity at w in {10, 50, 200, 500} with operand magnitudes 1e5-1e6 is in the wrong direction entirely (decreasing), meaning larger dense KANs make HZ worse, not better, at this magnitude regime. (3) T1.5 dictionary lane at 10M features crosses 44.17x - the structural difference is small-magnitude (unit-range) operands and feature counts >> 1e4, i.e., the HZ accumulator's amortization benefit is conditional on avoiding LCM blow-up. The next honest experiment is NOT another bench on the same substrate; it is an algorithmic change - emit operand groups without LCM pre-collapse (already partially done via denominator factoring) and re-examine whether the Rust HZ primitive's hot path changes. If yes, crossover may move. If no, the conjecture resolves by proving HZ has no advantage in dense rational-KAN regime and scoping the claim strictly to T1.5."
+    }
+  ],
+  "resolution": null,
+  "metadata": {
+    "created": "2026-04-20",
+    "created_by": "abraxas",
+    "tags": [
+      "split-from-rational_kan_hz_pstack_in_loop_20260420"
+    ],
+    "last_touched": "2026-04-20"
+  }
+}

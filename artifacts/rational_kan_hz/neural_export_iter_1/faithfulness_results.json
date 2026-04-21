@@ -1,0 +1,8 @@
+{
+  "n_tests": 200,
+  "point_mismatches": 0,
+  "latex_roundtrip_mismatches": 0,
+  "latex_roundtrip_mode": "parse_latex_roundtrip",
+  "seed": 20260420,
+  "commit": "c8967472d5"
+}

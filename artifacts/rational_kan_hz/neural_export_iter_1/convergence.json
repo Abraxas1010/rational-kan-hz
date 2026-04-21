@@ -1,0 +1,17 @@
+{
+  "training_semantics": "exact rational RKAN learning by normal equations over Boundary-compatible basis neurons",
+  "training_rows": 25,
+  "validation_rows": 200,
+  "coefficients": [
+    "1/1",
+    "1/1",
+    "-1/6"
+  ],
+  "initial_training_mse": "653/90",
+  "final_training_mse": "0/1",
+  "final_validation_mse": "0/1",
+  "loss_decreased": true,
+  "converged_exactly": true,
+  "weights_hash": "e0c73dec9c51f014e4f344c928e5cbf02f67cea2b83f8bb32f534e1576033963",
+  "commit": "c8967472d5"
+}

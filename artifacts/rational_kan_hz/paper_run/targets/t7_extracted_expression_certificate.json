@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "\\frac{x_{0} \\left(x_{0}^{2} + 3 x_{0} + 6\\right)}{6}",
+    "latex_sha256": "2d1fe220f05e34f4a21f8738c97a602238a60f995c01cb5cd51fe0d2f9dcbbd1",
+    "sympy_expression_sha256": "db865ef4ba7b0d05ff099efe6d7b420da9555c883f16a4c67ec46f98dea33dbe",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "x_{0}(x_0**2 + 3*x_0 + 6)/6",
+    "latex_roundtrip_residual": "-(x_0**3 + 3*x_0**2 + 6*x_0 - x_{0}(x_0**2 + 3*x_0 + 6))/6",
+    "latex_roundtrip_passed": false,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "-(-x_0**3 - 3*x_0**2 - 6*x_0 + 6*exp(x_0) - 6)/6",
+    "semantic_faithfulness_passed": false,
+    "faithfulness_kind": "approximate_numeric",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

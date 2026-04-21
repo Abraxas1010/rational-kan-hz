@@ -1,0 +1,6 @@
+import HeytingLean.Bridge.Veselov.HybridZeckendorf
+import HeytingLean.Boundary.Homomorphic.ZeckendorfCanonical
+import HeytingLean.SternBrocot.Idempotence
+import HeytingLean.Tests.Bridge.Veselov.HybridZeckendorfSanity
+import HeytingLean.Tests.Bridge.Veselov.VeselovHybridArithmeticSanity
+import HeytingLean.Tests.Bridge.Veselov.ZeckendorfEigenformSanity

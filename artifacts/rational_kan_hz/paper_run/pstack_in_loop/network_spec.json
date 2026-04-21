@@ -1,0 +1,18 @@
+{
+  "active_edge_terms": 216,
+  "active_hidden_units": 6,
+  "commit": "fd9b286f5c",
+  "degree": 8,
+  "hidden": 10,
+  "input_dim": 4,
+  "meets_scale_requirement": true,
+  "metadata": {
+    "degree": 8,
+    "hidden": 10,
+    "input_dim": 4,
+    "seed": 20260420,
+    "source": "seeded_sparse_exact_rkan",
+    "target": "t6_degree8_extended_4d"
+  },
+  "param_count": 371
+}

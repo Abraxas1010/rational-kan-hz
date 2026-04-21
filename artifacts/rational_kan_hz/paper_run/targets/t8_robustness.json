@@ -1,0 +1,61 @@
+{
+  "target_id": "t8",
+  "kind": "out_of_class",
+  "seed": 20260428,
+  "expression": "sqrt(Abs(x_0))*sign(x_0)",
+  "basis": [
+    "x_0",
+    "x_0**3",
+    "x_0**5"
+  ],
+  "coefficients": [
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": 0,
+      "den": 1
+    },
+    {
+      "num": 0,
+      "den": 1
+    }
+  ],
+  "extracted_expression": "x_0",
+  "symbolic_residual": "x_0 - sqrt(Abs(x_0))*sign(x_0)",
+  "expression_sha256": "3078a09641b0267f8091e87ae2583e018b47d1319aa9350c4fe5149367520551",
+  "rationalization_status": "residual_reported",
+  "rationalization_mode": "oracle_reconstruction",
+  "training_executed": false,
+  "training_executed_note": "This row validates the extraction pipeline against known oracle coefficients and basis. Training-convergence evidence is joined from trained-evidence artifacts at baseline-table time (see run_baselines rkan_p4_sbr_trained).",
+  "expected_status": "nonsmooth_residual",
+  "coefficient_max_abs_error": 0.0,
+  "final_mse": 0.06236562871413925,
+  "faithfulness_point_mismatches": null,
+  "faithfulness_points": 961,
+  "max_point_residual": 0.2497311128276556,
+  "threshold": 1e-06,
+  "threshold_source": "PM T1.4 target 8",
+  "pipeline_passed": false,
+  "passed": false,
+  "boundary_recorded": true,
+  "artifact_files": {
+    "sympy": "artifacts/rational_kan_hz/paper_run/targets/t8_extracted_expression.sympy",
+    "tex": "artifacts/rational_kan_hz/paper_run/targets/t8_extracted_expression.tex",
+    "pdf": "artifacts/rational_kan_hz/paper_run/targets/t8_extracted_expression.pdf",
+    "certificate": "artifacts/rational_kan_hz/paper_run/targets/t8_extracted_expression_certificate.json",
+    "pdf_compiled": true,
+    "latex_presentation_passed": true,
+    "semantic_faithfulness_passed": false
+  },
+  "latex_presentation_passed": true,
+  "semantic_faithfulness_passed": false,
+  "commit": "bb6703b45b",
+  "verdict": "out_of_class_residual_reported",
+  "oscillation_period": null,
+  "coefficient_norm_trajectory": [
+    1.0
+  ],
+  "final_denominator_bitwidth": 1
+}

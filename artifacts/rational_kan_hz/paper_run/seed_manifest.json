@@ -1,0 +1,821 @@
+{
+  "targets": [
+    {
+      "target_id": "t1",
+      "seed": 20260421
+    },
+    {
+      "target_id": "t2",
+      "seed": 20260422
+    },
+    {
+      "target_id": "t3",
+      "seed": 20260423
+    },
+    {
+      "target_id": "t4",
+      "seed": 20260424
+    },
+    {
+      "target_id": "t5",
+      "seed": 20260425
+    },
+    {
+      "target_id": "t6",
+      "seed": 20260426
+    },
+    {
+      "target_id": "t7",
+      "seed": 20260427
+    },
+    {
+      "target_id": "t8",
+      "seed": 20260428
+    }
+  ],
+  "scaling": [
+    {
+      "feature_count": 10000,
+      "sample_index": 0,
+      "seed": 20260420
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 1,
+      "seed": 20325957
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 2,
+      "seed": 20391494
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 3,
+      "seed": 20457031
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 4,
+      "seed": 20522568
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 5,
+      "seed": 20588105
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 6,
+      "seed": 20653642
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 7,
+      "seed": 20719179
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 8,
+      "seed": 20784716
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 9,
+      "seed": 20850253
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 10,
+      "seed": 20915790
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 11,
+      "seed": 20981327
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 12,
+      "seed": 21046864
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 13,
+      "seed": 21112401
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 14,
+      "seed": 21177938
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 15,
+      "seed": 21243475
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 16,
+      "seed": 21309012
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 17,
+      "seed": 21374549
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 18,
+      "seed": 21440086
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 19,
+      "seed": 21505623
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 20,
+      "seed": 21571160
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 21,
+      "seed": 21636697
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 22,
+      "seed": 21702234
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 23,
+      "seed": 21767771
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 24,
+      "seed": 21833308
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 25,
+      "seed": 21898845
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 26,
+      "seed": 21964382
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 27,
+      "seed": 22029919
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 28,
+      "seed": 22095456
+    },
+    {
+      "feature_count": 10000,
+      "sample_index": 29,
+      "seed": 22160993
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 0,
+      "seed": 20260420
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 1,
+      "seed": 20325957
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 2,
+      "seed": 20391494
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 3,
+      "seed": 20457031
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 4,
+      "seed": 20522568
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 5,
+      "seed": 20588105
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 6,
+      "seed": 20653642
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 7,
+      "seed": 20719179
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 8,
+      "seed": 20784716
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 9,
+      "seed": 20850253
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 10,
+      "seed": 20915790
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 11,
+      "seed": 20981327
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 12,
+      "seed": 21046864
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 13,
+      "seed": 21112401
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 14,
+      "seed": 21177938
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 15,
+      "seed": 21243475
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 16,
+      "seed": 21309012
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 17,
+      "seed": 21374549
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 18,
+      "seed": 21440086
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 19,
+      "seed": 21505623
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 20,
+      "seed": 21571160
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 21,
+      "seed": 21636697
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 22,
+      "seed": 21702234
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 23,
+      "seed": 21767771
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 24,
+      "seed": 21833308
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 25,
+      "seed": 21898845
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 26,
+      "seed": 21964382
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 27,
+      "seed": 22029919
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 28,
+      "seed": 22095456
+    },
+    {
+      "feature_count": 100000,
+      "sample_index": 29,
+      "seed": 22160993
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 0,
+      "seed": 20260420
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 1,
+      "seed": 20325957
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 2,
+      "seed": 20391494
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 3,
+      "seed": 20457031
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 4,
+      "seed": 20522568
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 5,
+      "seed": 20588105
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 6,
+      "seed": 20653642
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 7,
+      "seed": 20719179
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 8,
+      "seed": 20784716
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 9,
+      "seed": 20850253
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 10,
+      "seed": 20915790
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 11,
+      "seed": 20981327
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 12,
+      "seed": 21046864
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 13,
+      "seed": 21112401
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 14,
+      "seed": 21177938
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 15,
+      "seed": 21243475
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 16,
+      "seed": 21309012
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 17,
+      "seed": 21374549
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 18,
+      "seed": 21440086
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 19,
+      "seed": 21505623
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 20,
+      "seed": 21571160
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 21,
+      "seed": 21636697
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 22,
+      "seed": 21702234
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 23,
+      "seed": 21767771
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 24,
+      "seed": 21833308
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 25,
+      "seed": 21898845
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 26,
+      "seed": 21964382
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 27,
+      "seed": 22029919
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 28,
+      "seed": 22095456
+    },
+    {
+      "feature_count": 1000000,
+      "sample_index": 29,
+      "seed": 22160993
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 0,
+      "seed": 20260420
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 1,
+      "seed": 20325957
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 2,
+      "seed": 20391494
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 3,
+      "seed": 20457031
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 4,
+      "seed": 20522568
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 5,
+      "seed": 20588105
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 6,
+      "seed": 20653642
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 7,
+      "seed": 20719179
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 8,
+      "seed": 20784716
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 9,
+      "seed": 20850253
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 10,
+      "seed": 20915790
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 11,
+      "seed": 20981327
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 12,
+      "seed": 21046864
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 13,
+      "seed": 21112401
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 14,
+      "seed": 21177938
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 15,
+      "seed": 21243475
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 16,
+      "seed": 21309012
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 17,
+      "seed": 21374549
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 18,
+      "seed": 21440086
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 19,
+      "seed": 21505623
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 20,
+      "seed": 21571160
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 21,
+      "seed": 21636697
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 22,
+      "seed": 21702234
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 23,
+      "seed": 21767771
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 24,
+      "seed": 21833308
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 25,
+      "seed": 21898845
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 26,
+      "seed": 21964382
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 27,
+      "seed": 22029919
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 28,
+      "seed": 22095456
+    },
+    {
+      "feature_count": 10000000,
+      "sample_index": 29,
+      "seed": 22160993
+    }
+  ],
+  "trained_sweeps": [
+    {
+      "target_id": "t2",
+      "device": "cuda",
+      "sample_index": 0,
+      "seed": 21260422
+    },
+    {
+      "target_id": "t2",
+      "device": "cuda",
+      "sample_index": 1,
+      "seed": 21325959
+    },
+    {
+      "target_id": "t2",
+      "device": "cuda",
+      "sample_index": 2,
+      "seed": 21391496
+    },
+    {
+      "target_id": "t2",
+      "device": "cpu",
+      "sample_index": 0,
+      "seed": 20260422
+    },
+    {
+      "target_id": "t2",
+      "device": "cpu",
+      "sample_index": 1,
+      "seed": 20325959
+    },
+    {
+      "target_id": "t2",
+      "device": "cpu",
+      "sample_index": 2,
+      "seed": 20391496
+    },
+    {
+      "target_id": "t3",
+      "device": "cuda",
+      "sample_index": 0,
+      "seed": 21260423
+    },
+    {
+      "target_id": "t3",
+      "device": "cuda",
+      "sample_index": 1,
+      "seed": 21325960
+    },
+    {
+      "target_id": "t3",
+      "device": "cuda",
+      "sample_index": 2,
+      "seed": 21391497
+    },
+    {
+      "target_id": "t3",
+      "device": "cpu",
+      "sample_index": 0,
+      "seed": 20260423
+    },
+    {
+      "target_id": "t3",
+      "device": "cpu",
+      "sample_index": 1,
+      "seed": 20325960
+    },
+    {
+      "target_id": "t3",
+      "device": "cpu",
+      "sample_index": 2,
+      "seed": 20391497
+    },
+    {
+      "target_id": "t4",
+      "device": "cuda",
+      "sample_index": 0,
+      "seed": 21260424
+    },
+    {
+      "target_id": "t4",
+      "device": "cuda",
+      "sample_index": 1,
+      "seed": 21325961
+    },
+    {
+      "target_id": "t4",
+      "device": "cuda",
+      "sample_index": 2,
+      "seed": 21391498
+    },
+    {
+      "target_id": "t4",
+      "device": "cpu",
+      "sample_index": 0,
+      "seed": 20260424
+    },
+    {
+      "target_id": "t4",
+      "device": "cpu",
+      "sample_index": 1,
+      "seed": 20325961
+    },
+    {
+      "target_id": "t4",
+      "device": "cpu",
+      "sample_index": 2,
+      "seed": 20391498
+    },
+    {
+      "target_id": "t5",
+      "device": "cuda",
+      "sample_index": 0,
+      "seed": 21260425
+    },
+    {
+      "target_id": "t5",
+      "device": "cuda",
+      "sample_index": 1,
+      "seed": 21325962
+    },
+    {
+      "target_id": "t5",
+      "device": "cuda",
+      "sample_index": 2,
+      "seed": 21391499
+    },
+    {
+      "target_id": "t5",
+      "device": "cpu",
+      "sample_index": 0,
+      "seed": 20260425
+    },
+    {
+      "target_id": "t5",
+      "device": "cpu",
+      "sample_index": 1,
+      "seed": 20325962
+    },
+    {
+      "target_id": "t5",
+      "device": "cpu",
+      "sample_index": 2,
+      "seed": 20391499
+    },
+    {
+      "target_id": "t6",
+      "device": "cuda",
+      "sample_index": 0,
+      "seed": 21260426
+    },
+    {
+      "target_id": "t6",
+      "device": "cuda",
+      "sample_index": 1,
+      "seed": 21325963
+    },
+    {
+      "target_id": "t6",
+      "device": "cuda",
+      "sample_index": 2,
+      "seed": 21391500
+    },
+    {
+      "target_id": "t6",
+      "device": "cpu",
+      "sample_index": 0,
+      "seed": 20260426
+    },
+    {
+      "target_id": "t6",
+      "device": "cpu",
+      "sample_index": 1,
+      "seed": 20325963
+    },
+    {
+      "target_id": "t6",
+      "device": "cpu",
+      "sample_index": 2,
+      "seed": 20391500
+    }
+  ],
+  "commit": "6664a35489"
+}

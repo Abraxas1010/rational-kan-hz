@@ -1,0 +1,26 @@
+{
+  "presentation_certificate": {
+    "latex": "\\frac{x_{0} x_{1}}{x_{0}^{2} + x_{1}^{2} + 1}",
+    "latex_sha256": "3b94c0ae7eea8e2921d36ec6574017d134a2a0216111a207b0eec99df0cab694",
+    "sympy_expression_sha256": "0134340b64e45b9b5534130af4c10f1dd03dc89f508e17f127bff3b6ca4a9d72",
+    "latex_generator": "sympy.latex",
+    "latex_generation_passed": true,
+    "latex_roundtrip_parser": "sympy.parsing.latex.parse_latex",
+    "latex_roundtrip_available": true,
+    "latex_roundtrip_expression": "x_0*x_1/(x_0**2 + x_1**2 + 1)",
+    "latex_roundtrip_residual": "0",
+    "latex_roundtrip_passed": true,
+    "latex_presentation_passed": true,
+    "error": null,
+    "pdf_compiled": true
+  },
+  "semantic_certificate": {
+    "symbolic_expression_present": true,
+    "symbolic_residual": "0",
+    "semantic_faithfulness_passed": true,
+    "faithfulness_kind": "exact",
+    "numeric_mismatches": null,
+    "threshold": null
+  },
+  "pdf_compiled": true
+}

@@ -1,0 +1,228 @@
+{
+  "commit": "fd9b286f5c",
+  "cpu": {
+    "batch_size": 16,
+    "benchmark_kind": "amortized_training_update",
+    "bootstrap_samples": 1000,
+    "ci95_lower": 0.07012355597670272,
+    "ci95_upper": 0.07240530049136648,
+    "cuda_status": "not_requested",
+    "dense_backend": "python_fraction_immediate_updates",
+    "device_executed": "cpu",
+    "device_requested": "cpu",
+    "mean_speedup": 0.07125798346957654,
+    "microbatches": 32,
+    "model_state": "seeded_pretraining",
+    "pstack_backend": "rust_hz_factored_lazy_updates",
+    "rows": [
+      {
+        "batch_size": 16,
+        "dense_support_count": 94814,
+        "dense_total_update_ns": 82827839,
+        "input_hash": "9302d34f332f50cdd30771086ccd0b9e56ffcbe5031698614d40f147d2477286",
+        "microbatches": 32,
+        "output_hash_dense": "8d3a315ccffce9f88f669e1bb5fe53d16a5c49e5b291741dde27bcc4a9a59b57",
+        "output_hash_pstack": "8d3a315ccffce9f88f669e1bb5fe53d16a5c49e5b291741dde27bcc4a9a59b57",
+        "pstack_active_levels": 19275,
+        "pstack_distinct_denominators": 300,
+        "pstack_support_count": 70167,
+        "pstack_total_update_ns": 1217243810,
+        "pstack_witness_bytes": 702462,
+        "sample_index": 0,
+        "seed": 20280420,
+        "speedup_ratio": 0.06804539757733498
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 93446,
+        "dense_total_update_ns": 83070849,
+        "input_hash": "ff1335199ba9db7200181b3c62687074531640a8a347ef4078c94e4fc9eecf7b",
+        "microbatches": 32,
+        "output_hash_dense": "08549591db37f290cf27b32373618f5fea326b850902bd3cfea5f856997d9c65",
+        "output_hash_pstack": "08549591db37f290cf27b32373618f5fea326b850902bd3cfea5f856997d9c65",
+        "pstack_active_levels": 19381,
+        "pstack_distinct_denominators": 301,
+        "pstack_support_count": 70736,
+        "pstack_total_update_ns": 1166042198,
+        "pstack_witness_bytes": 693484,
+        "sample_index": 1,
+        "seed": 20280551,
+        "speedup_ratio": 0.07124171761749569
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94446,
+        "dense_total_update_ns": 81272254,
+        "input_hash": "87e1a9f5f1fdab85cbbf290a62975452ade6d9b2fdccf4d33f52c175cb5cdf87",
+        "microbatches": 32,
+        "output_hash_dense": "03ecf6686bba7676196c08a477365af26c8211364aec5953e6bb06a0d91928ea",
+        "output_hash_pstack": "03ecf6686bba7676196c08a477365af26c8211364aec5953e6bb06a0d91928ea",
+        "pstack_active_levels": 19337,
+        "pstack_distinct_denominators": 300,
+        "pstack_support_count": 71052,
+        "pstack_total_update_ns": 1173369374,
+        "pstack_witness_bytes": 702230,
+        "sample_index": 2,
+        "seed": 20280682,
+        "speedup_ratio": 0.06926399802216075
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94990,
+        "dense_total_update_ns": 84810852,
+        "input_hash": "040ff2f94c6f835072da2eaf764fa6063297505abbcbe5250f557b82ddd966f2",
+        "microbatches": 32,
+        "output_hash_dense": "1089d45135479ea48e7155d63622e9e30edaee56cf23341d86df7f569fb2e4c8",
+        "output_hash_pstack": "1089d45135479ea48e7155d63622e9e30edaee56cf23341d86df7f569fb2e4c8",
+        "pstack_active_levels": 19470,
+        "pstack_distinct_denominators": 304,
+        "pstack_support_count": 71117,
+        "pstack_total_update_ns": 1198382152,
+        "pstack_witness_bytes": 709439,
+        "sample_index": 3,
+        "seed": 20280813,
+        "speedup_ratio": 0.0707711241013209
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 93040,
+        "dense_total_update_ns": 80750806,
+        "input_hash": "06ae37517541f918c6bea155f604700b986ed5d7e2654818145fd040df6545d2",
+        "microbatches": 32,
+        "output_hash_dense": "ccf1682db869bdaee4f4630d42baf64a6bec2655d40be38124f9935d660a5942",
+        "output_hash_pstack": "ccf1682db869bdaee4f4630d42baf64a6bec2655d40be38124f9935d660a5942",
+        "pstack_active_levels": 19365,
+        "pstack_distinct_denominators": 296,
+        "pstack_support_count": 70964,
+        "pstack_total_update_ns": 1154718945,
+        "pstack_witness_bytes": 687826,
+        "sample_index": 4,
+        "seed": 20280944,
+        "speedup_ratio": 0.06993113462774268
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94674,
+        "dense_total_update_ns": 82031124,
+        "input_hash": "7eb070efb3c127802872d52a1f2ebf06dcc4f2fb62c4c8f220b6beee293709d9",
+        "microbatches": 32,
+        "output_hash_dense": "07ff14e598d42ff723b1d7721b29368a64748464f6e8e3fc28ab68c83ebbb43f",
+        "output_hash_pstack": "07ff14e598d42ff723b1d7721b29368a64748464f6e8e3fc28ab68c83ebbb43f",
+        "pstack_active_levels": 19180,
+        "pstack_distinct_denominators": 302,
+        "pstack_support_count": 70527,
+        "pstack_total_update_ns": 1164940328,
+        "pstack_witness_bytes": 703935,
+        "sample_index": 5,
+        "seed": 20281075,
+        "speedup_ratio": 0.07041658875423532
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94062,
+        "dense_total_update_ns": 84943795,
+        "input_hash": "a104fb361e7c5041ef6fb8c3231cf927696e7190979278536675c8e6bc3d815c",
+        "microbatches": 32,
+        "output_hash_dense": "828736238358713d5dfdd3d01c9c891854eb609753f5024404b19c6fb8e98fa4",
+        "output_hash_pstack": "828736238358713d5dfdd3d01c9c891854eb609753f5024404b19c6fb8e98fa4",
+        "pstack_active_levels": 19605,
+        "pstack_distinct_denominators": 306,
+        "pstack_support_count": 71715,
+        "pstack_total_update_ns": 1150654404,
+        "pstack_witness_bytes": 704716,
+        "sample_index": 6,
+        "seed": 20281206,
+        "speedup_ratio": 0.07382216128901202
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94210,
+        "dense_total_update_ns": 84745344,
+        "input_hash": "45c3d2c97943085e95b24eb0c35f1c0ee1805445c2337f48852bc34ffe85beb7",
+        "microbatches": 32,
+        "output_hash_dense": "df77dbbe0230e7cb6db79c6ca87262a89fe2b3611e526122e06498948c9dc5b2",
+        "output_hash_pstack": "df77dbbe0230e7cb6db79c6ca87262a89fe2b3611e526122e06498948c9dc5b2",
+        "pstack_active_levels": 19307,
+        "pstack_distinct_denominators": 298,
+        "pstack_support_count": 70214,
+        "pstack_total_update_ns": 1167286209,
+        "pstack_witness_bytes": 695519,
+        "sample_index": 7,
+        "seed": 20281337,
+        "speedup_ratio": 0.07260031288521802
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 92834,
+        "dense_total_update_ns": 82624072,
+        "input_hash": "2db0e8c544d8d38e30c8a1eb9b513d72bfb8db75f95072b387d2bdadd65a89e2",
+        "microbatches": 32,
+        "output_hash_dense": "3900da436f6283d0c8b64803da0f2a0562f185898866b634a2ced8b9aa435c0b",
+        "output_hash_pstack": "3900da436f6283d0c8b64803da0f2a0562f185898866b634a2ced8b9aa435c0b",
+        "pstack_active_levels": 19558,
+        "pstack_distinct_denominators": 304,
+        "pstack_support_count": 71451,
+        "pstack_total_update_ns": 1139144597,
+        "pstack_witness_bytes": 694841,
+        "sample_index": 8,
+        "seed": 20281468,
+        "speedup_ratio": 0.0725316805413422
+      },
+      {
+        "batch_size": 16,
+        "dense_support_count": 94458,
+        "dense_total_update_ns": 85444423,
+        "input_hash": "60ea1301e04ba7115bc1b4291e4765fbf31da865cea80345e744eb30bcadd06c",
+        "microbatches": 32,
+        "output_hash_dense": "c97d4aed65b516575604e22780eb83af8bf45ce0ccc5b02f93fbbf203cc05da2",
+        "output_hash_pstack": "c97d4aed65b516575604e22780eb83af8bf45ce0ccc5b02f93fbbf203cc05da2",
+        "pstack_active_levels": 19744,
+        "pstack_distinct_denominators": 301,
+        "pstack_support_count": 71939,
+        "pstack_total_update_ns": 1155345710,
+        "pstack_witness_bytes": 702550,
+        "sample_index": 9,
+        "seed": 20281599,
+        "speedup_ratio": 0.07395571927990281
+      }
+    ],
+    "samples": 10,
+    "speedup_gate": false
+  },
+  "cuda": null,
+  "host_cpu": "unknown",
+  "speedup_gate": false,
+  "thermal_state_start": {
+    "available": true,
+    "zones": [
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone0"
+      },
+      {
+        "millidegrees_c": 52500,
+        "zone": "thermal_zone1"
+      },
+      {
+        "millidegrees_c": 55100,
+        "zone": "thermal_zone2"
+      },
+      {
+        "millidegrees_c": 52600,
+        "zone": "thermal_zone3"
+      },
+      {
+        "millidegrees_c": 65900,
+        "zone": "thermal_zone4"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone5"
+      },
+      {
+        "millidegrees_c": 53800,
+        "zone": "thermal_zone6"
+      }
+    ]
+  }
+}

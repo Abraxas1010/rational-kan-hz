@@ -1,0 +1,55 @@
+{
+  "target_id": "t7",
+  "kind": "out_of_class",
+  "seed": 20260427,
+  "expression": "exp(x_0) - 1",
+  "basis": [
+    "x_0",
+    "x_0**2",
+    "x_0**3"
+  ],
+  "coefficients": [
+    {
+      "num": 1,
+      "den": 1
+    },
+    {
+      "num": 1,
+      "den": 2
+    },
+    {
+      "num": 1,
+      "den": 6
+    }
+  ],
+  "extracted_expression": "x_0*(x_0**2 + 3*x_0 + 6)/6",
+  "symbolic_residual": "-(-x_0**3 - 3*x_0**2 - 6*x_0 + 6*exp(x_0) - 6)/6",
+  "expression_sha256": "db865ef4ba7b0d05ff099efe6d7b420da9555c883f16a4c67ec46f98dea33dbe",
+  "rationalization_status": "residual_reported",
+  "rationalization_mode": "oracle_reconstruction",
+  "training_executed": false,
+  "training_executed_note": "This row validates the extraction pipeline against known oracle coefficients and basis. Training-convergence evidence is joined from trained-evidence artifacts at baseline-table time (see run_baselines rkan_p4_sbr_trained).",
+  "expected_status": "best_approximant_or_residual",
+  "coefficient_max_abs_error": 0.0,
+  "final_mse": 0.002664124926853417,
+  "faithfulness_point_mismatches": null,
+  "faithfulness_points": 961,
+  "max_point_residual": 0.05161516179237857,
+  "threshold": 1e-06,
+  "threshold_source": "PM T1.4 target 7",
+  "pipeline_passed": false,
+  "passed": false,
+  "boundary_recorded": true,
+  "artifact_files": {
+    "sympy": "artifacts/rational_kan_hz/paper_run/targets/t7_extracted_expression.sympy",
+    "tex": "artifacts/rational_kan_hz/paper_run/targets/t7_extracted_expression.tex",
+    "pdf": "artifacts/rational_kan_hz/paper_run/targets/t7_extracted_expression.pdf",
+    "certificate": "artifacts/rational_kan_hz/paper_run/targets/t7_extracted_expression_certificate.json",
+    "pdf_compiled": true,
+    "latex_presentation_passed": true,
+    "semantic_faithfulness_passed": false
+  },
+  "latex_presentation_passed": true,
+  "semantic_faithfulness_passed": false,
+  "commit": "bb6703b45b"
+}
